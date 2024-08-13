@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "better_sdt", "better_sdt\better_sdt.csproj", "{72819292-71FE-4CB7-A61D-44D65ED9D182}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72819292-71FE-4CB7-A61D-44D65ED9D182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72819292-71FE-4CB7-A61D-44D65ED9D182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72819292-71FE-4CB7-A61D-44D65ED9D182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72819292-71FE-4CB7-A61D-44D65ED9D182}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {995FD7D6-220A-4F81-BFAF-BBE9E8453750}
+	EndGlobalSection
+EndGlobal
