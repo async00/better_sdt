@@ -75,20 +75,23 @@ namespace better_sdt
         }
         internal static void LogPins()
         {
-            int[] pins = { 2, 3, 4, 17, 27,22,10,9 };
-            Console.Clear();
-
-            Console.WriteLine("TCRT5000 Sensör Okumaları:");
-            Console.WriteLine("--------------------------");
-            Console.WriteLine("| Pin | Durum           |");
-            Console.WriteLine("--------------------------");
-
-            foreach (var pin in pins)
+            while (true)
             {
-                var value = cpv.ReadPin(pin);
-                Console.WriteLine($"{pin}||{value}");
+                int[] pins = { 2, 3, 4, 17, 27, 22, 10, 9 };
+                Console.Clear();
+
+                Console.WriteLine("TCRT5000 Sensör Okumaları:");
+                Console.WriteLine("--------------------------");
+                Console.WriteLine("| Pin | Durum           |");
+                Console.WriteLine("--------------------------");
+
+                foreach (var pin in pins)
+                {
+                    var value = cpv.ReadPin(pin);
+                    Console.WriteLine($"{pin}||{value}");
+                }
+                Console.WriteLine("--------------------------");
             }
-            Console.WriteLine("--------------------------");
         }
         private static void AttachToEngine()
         {
