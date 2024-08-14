@@ -91,6 +91,7 @@ namespace better_sdt
                     Console.WriteLine($"{pin}||{value}");
                 }
                 Console.WriteLine("--------------------------");
+                Thread.Sleep(60);
             }
         }
         private static void AttachToEngine()
