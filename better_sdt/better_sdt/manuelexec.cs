@@ -9,7 +9,7 @@ namespace better_sdt
 {
     internal class manuelexec
     {
-        internal static string[] commandlisrt = ["help", "list","clear","exit"];
+        internal static string[] commandlisrt = ["help", "list","clear","exit","lrstart","lrlog"];
         internal static bool consolestatus = false; 
         internal static void GetConsole()
         {
@@ -24,13 +24,9 @@ namespace better_sdt
                 input = Console.ReadLine();
                 if (!(string.IsNullOrEmpty(input)))// null veya empty ise sg 
                 {
-                    if (commandlisrt.Contains(input)){
-                        doit(input);
-                    }
-                    else
-                    {
-                        LogSys.ErrorLog("bash ? command not found ");
-                    }
+                    
+                    doit(input);
+                   
                 }
                 else
                 {
@@ -63,8 +59,19 @@ namespace better_sdt
                     LogSys.InfoLog("bye ! exit");
                     Dispose();
                     break;
+                case "lrstart":
+                    LogSys.InfoLog("Line read started with calibration ");
+                    PwmEngine.PWM_BEGİN();
+                    LRinital.Start();
+                    break;
+                case "lrlog":
+                    LogSys.InfoLog("Line read started with calibration ");
+                    PwmEngine.PWM_BEGİN();
+                    LRinital.Start();
+                    LRinital.LogPins();
+                    break;
                 default:
-                    LogSys.ErrorLog("update your command list lil nigga");
+                    LogSys.ErrorLog("Mexec ? command not found ");
                     break;
 
             }

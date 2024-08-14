@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("better_sdt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b6f9d7b6c6256fc9675781876fabe42a548324a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a629db07507b9386c9e42e00b37cd3990d219ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("better_sdt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("better_sdt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

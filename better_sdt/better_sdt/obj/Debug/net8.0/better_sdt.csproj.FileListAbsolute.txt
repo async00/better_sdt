@@ -19,3 +19,4 @@ C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Deb
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\Unosquare.RaspberryIO.dll
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\Swan.dll
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\Swan.Lite.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\obj\Debug\net8.0\better_sdt.sourcelink.json

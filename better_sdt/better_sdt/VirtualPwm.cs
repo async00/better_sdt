@@ -65,13 +65,21 @@ namespace bettersdt
 
         public void Stop()
         {
-            this.SetPercent(0);
-            if (pwmTimer != null)
+            try
             {
-                pwmTimer.Dispose();
-                pwmTimer = null;
+                this.SetPercent(0);
+                if (pwmTimer != null)
+                {
+                    pwmTimer.Dispose();
+                    pwmTimer = null;
+                }
+                controller.Write(pin, PinValue.Low);
             }
-            controller.Write(pin, PinValue.Low);
+            catch (Exception ex)
+            {
+                LogSys.ErrorLog("virtual pwm cant stop "+ ex.Message);
+            }
+          
         }
     }
 }

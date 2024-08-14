@@ -8,8 +8,6 @@ namespace better_sdt
 {
     internal static class UPins
     {
-        // METHOD YOK SADECE PINLER BURADA YAZIYOR 
-        //LAYOUT
         #region pins 
         /*
 1  3v3 Power       |  2  5v Power
@@ -35,7 +33,18 @@ namespace better_sdt
          */
         #endregion
 
-       
+
+        //line read cizgi sensoru pnileri 
+        internal static int LR_PIN1 = 2;
+        internal static int LR_PIN2 = 3;
+        internal static int LR_PIN3 = 4;
+        internal static int LR_PIN4 = 17;
+        internal static int LR_PIN5 = 27;
+        internal static int LR_PIN6 = 22;
+        internal static int LR_PIN7 = 10;
+        internal static int LR_PIN8 = 9;
+
+
 
     }
 }

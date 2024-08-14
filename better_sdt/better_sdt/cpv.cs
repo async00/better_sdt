@@ -6,7 +6,7 @@ using Unosquare.RaspberryIO.Abstractions;
 using Unosquare.RaspberryIO;
 using bettersdt;
 namespace bettersdt{
-public static class GC
+public class cpv
 {
     private static readonly GpioController _gpioController = new GpioController();
 
@@ -32,25 +32,29 @@ public static class GC
         if (_gpioController.IsPinOpen(pinNumber))
         {
             _gpioController.Write(pinNumber, value);
+            return;
         }
+            LogSys.ErrorLog($"Pin {pinNumber} is not open.");
+
+
         
     }
 
     // pini oku 1 veya 0 döner
-    public static int ReadPin(int pinNumber)
+    public static bool ReadPin(int pinNumber)
     {
         if (_gpioController.IsPinOpen(pinNumber))
         {
             PinValue value = _gpioController.Read(pinNumber);
             if (value==PinValue.High)
-                return 1;    
-            return 0;
+                return true;    
+            return false;
             
         }
         else
         {
             LogSys.ErrorLog($"Pin {pinNumber} is not open.");
-            return -1;
+            return false;
         }
     }
 
