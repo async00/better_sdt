@@ -66,7 +66,6 @@ namespace better_sdt
                     break;
                 case "lrlog":
                     LogSys.InfoLog("Line read started with calibration ");
-                    PwmEngine.PWM_BEGİN();
                     LRinital.Start();
                     LRinital.LogPins();
                     break;
