@@ -62,6 +62,9 @@ namespace better_sdt
                 case "clear":
                     Console.Clear();
                     break;
+                case "bitstart":
+                    BitCommunication.StartListener();
+                    break;
                 case "exit":
                     LogSys.InfoLog("bye ! exit");
                     manuelexec.Dispose();
