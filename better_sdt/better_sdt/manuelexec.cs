@@ -38,6 +38,13 @@ namespace better_sdt
         }
         private static void doit(string command )
         {
+            if (command.Contains("wr"))
+            {
+                string text = command.Replace("wr ", "");
+                BitCommunication.SendMessage(text);
+                return;
+            }
+
             switch (command)
             {
                 case "help":
@@ -57,23 +64,14 @@ namespace better_sdt
                     break;
                 case "exit":
                     LogSys.InfoLog("bye ! exit");
-                    Dispose();
-                    break;
-                case "lrstart":
-                    LogSys.InfoLog("Line read started with calibration ");
-                    PwmEngine.PWM_BEGİN();
-                    LRinital.Start();
-                    break;
-                case "lrlog":
-                    LogSys.InfoLog("Line read started with calibration ");
-                    LRinital.Start();
-                    LRinital.LogPins();
+                    manuelexec.Dispose();
                     break;
                 default:
                     LogSys.ErrorLog("Mexec ? command not found ");
                     break;
 
             }
+
         }
         internal static void Dispose()
         {

@@ -33,7 +33,6 @@ namespace better_sdt
          */
         #endregion
 
-
         //line read cizgi sensoru pnileri 
         internal static int LR_PIN1 = 2;
         internal static int LR_PIN2 = 3;

@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[3.2.0, )"
             },
+            "System.IO.Ports": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Unosquare.Raspberry.IO": {
               "target": "Package",
               "version": "[0.27.1, )"
