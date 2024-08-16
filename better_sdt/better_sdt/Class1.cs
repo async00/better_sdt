@@ -1,10 +1,11 @@
 ﻿using System;
+using IronBarCode;
 using OpenCvSharp;
-using ZXing;
+using OpenCvSharp.Extensions;
 
 class qrs
 {
-    internal static void start()
+    internal static void Start()
     {
         // VideoCapture ile kamerayı başlat
         using var capture = new VideoCapture(0);
@@ -14,8 +15,6 @@ class qrs
             Console.WriteLine("Kamera açılamadı.");
             return;
         }
-
-        var barcodeReader = new BarcodeReader();
 
         while (true)
         {
@@ -29,11 +28,11 @@ class qrs
             }
 
             // QR kodunu oku
-            var result = ReadQRCode(frame, barcodeReader);
+            var result = ReadQRCode(frame);
 
             if (result != null)
             {
-                Console.WriteLine("QR Kodu: " + result.Text);
+                Console.WriteLine("QR Kodu: " + result);
             }
 
             // Çıkmak için 'q' tuşuna basın
@@ -44,15 +43,10 @@ class qrs
         }
     }
 
-    private static Result ReadQRCode(Mat frame, BarcodeReader barcodeReader)
+    private static string ReadQRCode(Mat frame)
     {
-        using var grayFrame = new Mat();
-        Cv2.CvtColor(frame, grayFrame, ColorConversionCodes.BGR2GRAY);
-        var bytes = grayFrame.ToBytes(".png");
-        using var bitmapStream = new MemoryStream(bytes);
-        using var bitmap = new System.Drawing.Bitmap(bitmapStream);
-        var result = barcodeReader.Decode(bitmap);
-
-        return result;
+        using var bitmap = OpenCvSharp.Extensions.BitmapConverter.ToBitmap(frame);
+        var qrCode = BarcodeReader.QuicklyReadOneBarcode(bitmap);
+        return qrCode?.Text;
     }
 }

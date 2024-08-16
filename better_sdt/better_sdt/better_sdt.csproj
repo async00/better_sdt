@@ -17,7 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BarCode" Version="2024.7.2" />
     <PackageReference Include="OpenCvSharp4" Version="4.10.0.20240616" />
+    <PackageReference Include="OpenCvSharp4.Extensions" Version="4.10.0.20240616" />
     <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.10.0.20240616" />
     <PackageReference Include="System.Device.Gpio" Version="3.2.0" />
     <PackageReference Include="System.Drawing.Common" Version="8.0.8" />

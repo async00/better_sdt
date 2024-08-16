@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v8.0": {
       "better_sdt/1.0.0": {
         "dependencies": {
+          "BarCode": "2024.7.2",
           "OpenCvSharp4": "4.10.0.20240616",
+          "OpenCvSharp4.Extensions": "4.10.0.20240616",
           "OpenCvSharp4.runtime.win": "4.10.0.20240616",
           "System.Device.Gpio": "3.2.0",
           "System.Drawing.Common": "8.0.8",
@@ -18,6 +20,425 @@
         },
         "runtime": {
           "better_sdt.dll": {}
+        }
+      },
+      "BarCode/2024.7.2": {
+        "dependencies": {
+          "BarCode.Slim": "2024.7.2",
+          "Microsoft.ML.OnnxRuntime": "1.17.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/IronBarcodeDetection.dll": {
+            "assemblyVersion": "2024.7.0.2",
+            "fileVersion": "2024.7.0.2"
+          }
+        }
+      },
+      "BarCode.Slim/2024.7.2": {
+        "dependencies": {
+          "IronSoftware.Common": "2024.1.7",
+          "IronSoftware.System.Drawing": "2024.7.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/IronBarCode.dll": {
+            "assemblyVersion": "2024.7.0.2",
+            "fileVersion": "2024.7.0.2"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/IronBarcodeInterop.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-arm64/native/IronBarcodeInterop.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/IronBarcodeInterop.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/IronBarcodeInterop.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "2024.7.0.65"
+          },
+          "runtimes/win-x86/native/IronBarcodeInterop.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "2024.7.0.65"
+          }
+        }
+      },
+      "BitMiracle.LibTiff.NET/2.4.649": {
+        "runtime": {
+          "lib/netstandard2.0/BitMiracle.LibTiff.NET.dll": {
+            "assemblyVersion": "2.4.649.0",
+            "fileVersion": "2.4.649.0"
+          }
+        }
+      },
+      "IronSoftware.Common/2024.1.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.Configuration.Json": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "System.Configuration.ConfigurationManager": "6.0.0",
+          "System.Memory": "4.5.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/IronSoftware.Abstractions.dll": {
+            "assemblyVersion": "2024.1.0.7",
+            "fileVersion": "2024.1.0.7"
+          },
+          "lib/netstandard2.0/IronSoftware.Logger.dll": {
+            "assemblyVersion": "2024.1.0.7",
+            "fileVersion": "2024.1.0.7"
+          },
+          "lib/netstandard2.0/IronSoftware.Shared.dll": {
+            "assemblyVersion": "2024.1.0.7",
+            "fileVersion": "2024.1.0.7"
+          }
+        }
+      },
+      "IronSoftware.System.Drawing/2024.7.2": {
+        "dependencies": {
+          "BitMiracle.LibTiff.NET": "2.4.649",
+          "SixLabors.ImageSharp": "3.1.4",
+          "SixLabors.ImageSharp.Drawing": "2.1.3",
+          "System.Memory": "4.5.5"
+        },
+        "runtime": {
+          "lib/net60/IronSoftware.Drawing.Common.dll": {
+            "assemblyVersion": "2024.7.0.2",
+            "fileVersion": "2024.7.0.2"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.FileExtensions/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.FileProviders.Abstractions": "6.0.0",
+          "Microsoft.Extensions.FileProviders.Physical": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Json/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.FileExtensions": "6.0.0",
+          "Microsoft.Extensions.FileProviders.Abstractions": "6.0.0",
+          "System.Text.Json": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Extensions.Configuration.Json.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Physical/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "6.0.0",
+          "Microsoft.Extensions.FileSystemGlobbing": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.FileProviders.Physical.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.FileSystemGlobbing/6.0.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.FileSystemGlobbing.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.ML.OnnxRuntime/1.17.1": {
+        "dependencies": {
+          "Microsoft.ML.OnnxRuntime.Managed": "1.17.1"
+        },
+        "runtimeTargets": {
+          "runtimes/android/native/onnxruntime.aar": {
+            "rid": "android",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/Info.plist": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/coreml_provider_factory.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/cpu_provider_factory.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_c_api.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_cxx_api.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_cxx_inline.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_float16.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_run_options_config_keys.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_session_options_config_keys.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Info.plist": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/onnxruntime": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/coreml_provider_factory.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/cpu_provider_factory.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_c_api.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_cxx_api.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_cxx_inline.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_float16.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_run_options_config_keys.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_session_options_config_keys.h": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Info.plist": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/onnxruntime": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/libonnxruntime.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libonnxruntime.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-arm64/native/libonnxruntime.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libonnxruntime.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/onnxruntime.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.17.24.223"
+          },
+          "runtimes/win-arm64/native/onnxruntime.lib": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/onnxruntime_providers_shared.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.17.24.223"
+          },
+          "runtimes/win-arm64/native/onnxruntime_providers_shared.lib": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/onnxruntime.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.17.24.223"
+          },
+          "runtimes/win-x64/native/onnxruntime.lib": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/onnxruntime_providers_shared.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.17.24.223"
+          },
+          "runtimes/win-x64/native/onnxruntime_providers_shared.lib": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/onnxruntime.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.17.24.223"
+          },
+          "runtimes/win-x86/native/onnxruntime.lib": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/onnxruntime_providers_shared.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.17.24.223"
+          },
+          "runtimes/win-x86/native/onnxruntime_providers_shared.lib": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Microsoft.ML.OnnxRuntime.Managed/1.17.1": {
+        "dependencies": {
+          "System.Memory": "4.5.5"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.ML.OnnxRuntime.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.1": {},
@@ -52,6 +473,18 @@
         },
         "runtime": {
           "lib/net6.0/OpenCvSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "OpenCvSharp4.Extensions/4.10.0.20240616": {
+        "dependencies": {
+          "OpenCvSharp4": "4.10.0.20240616",
+          "System.Drawing.Common": "8.0.8"
+        },
+        "runtime": {
+          "lib/net6.0/OpenCvSharp.Extensions.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -177,6 +610,34 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
+      "SixLabors.Fonts/2.0.3": {
+        "runtime": {
+          "lib/net6.0/SixLabors.Fonts.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.3.0"
+          }
+        }
+      },
+      "SixLabors.ImageSharp/3.1.4": {
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.1.4.0"
+          }
+        }
+      },
+      "SixLabors.ImageSharp.Drawing/2.1.3": {
+        "dependencies": {
+          "SixLabors.Fonts": "2.0.3",
+          "SixLabors.ImageSharp": "3.1.4"
+        },
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.Drawing.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.3.0"
+          }
+        }
+      },
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
@@ -196,6 +657,18 @@
           "System.Runtime.Extensions": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Configuration.ConfigurationManager/6.0.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "6.0.0",
+          "System.Security.Permissions": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
         }
       },
       "System.Device.Gpio/3.2.0": {
@@ -465,6 +938,7 @@
           "System.Runtime.Extensions": "4.3.0"
         }
       },
+      "System.Security.AccessControl/6.0.0": {},
       "System.Security.Claims/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -570,6 +1044,22 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Security.Cryptography.ProtectedData/6.0.0": {
+        "runtime": {
+          "lib/net6.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
       "System.Security.Cryptography.X509Certificates/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
@@ -597,6 +1087,18 @@
           "runtime.native.System": "4.3.0",
           "runtime.native.System.Net.Http": "4.3.0",
           "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+        }
+      },
+      "System.Security.Permissions/6.0.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "6.0.0",
+          "System.Windows.Extensions": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.Security.Permissions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
         }
       },
       "System.Security.Principal/4.3.0": {
@@ -627,6 +1129,17 @@
           "Microsoft.NETCore.Platforms": "1.1.1",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Text.Encodings.Web/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "System.Text.Json/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "6.0.0"
         }
       },
       "System.Threading/4.3.0": {
@@ -662,6 +1175,25 @@
         }
       },
       "System.ValueTuple/4.5.0": {},
+      "System.Windows.Extensions/6.0.0": {
+        "dependencies": {
+          "System.Drawing.Common": "8.0.8"
+        },
+        "runtime": {
+          "lib/net6.0/System.Windows.Extensions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Windows.Extensions.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
       "Unosquare.Raspberry.Abstractions/0.4.1": {
         "runtime": {
           "lib/netstandard2.0/Unosquare.Raspberry.Abstractions.dll": {
@@ -726,6 +1258,125 @@
       "serviceable": false,
       "sha512": ""
     },
+    "BarCode/2024.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RMwObLWtMvK/4Mv6uLm4K+LzqanP+hTTu/9qE7xB+Y0RPqMHyuzdrtU5GfRWcHAxOzuqLKqUrEofYggWmFx32w==",
+      "path": "barcode/2024.7.2",
+      "hashPath": "barcode.2024.7.2.nupkg.sha512"
+    },
+    "BarCode.Slim/2024.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IWB41817t7DyQ8WgnEDCfsrpa3/L70pSEJSvoZSa1gaV1vUOk2biROWyy6zUBDQqDiU6H2okM80JHSACeH7kRQ==",
+      "path": "barcode.slim/2024.7.2",
+      "hashPath": "barcode.slim.2024.7.2.nupkg.sha512"
+    },
+    "BitMiracle.LibTiff.NET/2.4.649": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XCEdfCphKo0UAvSg1h/OzOFWtjkIGnPMAziYkNqV7NVrqb/tZJTBxJhxIEX7gpvQwg8GIRYt133SUncfkKfjLA==",
+      "path": "bitmiracle.libtiff.net/2.4.649",
+      "hashPath": "bitmiracle.libtiff.net.2.4.649.nupkg.sha512"
+    },
+    "IronSoftware.Common/2024.1.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A0X6f+9uCo38VNx/VXT8n3soqpLZoLoj5Vd5cfUKhvLUxX7wZ/qnmZ3QvEbZwlo6K+N93sWcQrQ0w7uYwp65zw==",
+      "path": "ironsoftware.common/2024.1.7",
+      "hashPath": "ironsoftware.common.2024.1.7.nupkg.sha512"
+    },
+    "IronSoftware.System.Drawing/2024.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SimrphHQX8c3PO4rTudpdzT3H9jC3+jgTvwKyqxvLIRFLpVN1FwlTVV8t6L45cqcvdQX5czkn6yqhSQkKinSnA==",
+      "path": "ironsoftware.system.drawing/2024.7.2",
+      "hashPath": "ironsoftware.system.drawing.2024.7.2.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tq2wXyh3fL17EMF2bXgRhU7JrbO3on93MRKYxzz4JzzvuGSA1l0W3GI9/tl8EO89TH+KWEymP7bcFway6z9fXg==",
+      "path": "microsoft.extensions.configuration/6.0.0",
+      "hashPath": "microsoft.extensions.configuration.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qWzV9o+ZRWq+pGm+1dF+R7qTgTYoXvbyowRoBxQJGfqTpqDun2eteerjRQhq5PQ/14S+lqto3Ft4gYaRyl4rdQ==",
+      "path": "microsoft.extensions.configuration.abstractions/6.0.0",
+      "hashPath": "microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b3ErKzND8LIC7o08QAVlKfaEIYEvLJbtmVbFZVBRXeu9YkKfSSzLZfR1SUfQPBIy9mKLhEtJgGYImkcMNaKE0A==",
+      "path": "microsoft.extensions.configuration.binder/6.0.0",
+      "hashPath": "microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.FileExtensions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V4Dth2cYMZpw3HhGw9XUDIijpI6gN+22LDt0AhufIgOppCUfpWX4483OmN+dFXRJkJLc8Tv0Q8QK+1ingT2+KQ==",
+      "path": "microsoft.extensions.configuration.fileextensions/6.0.0",
+      "hashPath": "microsoft.extensions.configuration.fileextensions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Json/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GJGery6QytCzS/BxJ96klgG9in3uH26KcUBbiVG/coNDXCRq6LGVVlUT4vXq34KPuM+R2av+LeYdX9h4IZOCUg==",
+      "path": "microsoft.extensions.configuration.json/6.0.0",
+      "hashPath": "microsoft.extensions.configuration.json.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0pd4/fho0gC12rQswaGQxbU34jOS1TPS8lZPpkFCH68ppQjHNHYle9iRuHeev1LhrJ94YPvzcRd8UmIuFk23Qw==",
+      "path": "microsoft.extensions.fileproviders.abstractions/6.0.0",
+      "hashPath": "microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.FileProviders.Physical/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QvkL7l0nM8udt3gfyu0Vw8bbCXblxaKOl7c2oBfgGy4LCURRaL9XWZX1FWJrQc43oMokVneVxH38iz+bY1sbhg==",
+      "path": "microsoft.extensions.fileproviders.physical/6.0.0",
+      "hashPath": "microsoft.extensions.fileproviders.physical.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.FileSystemGlobbing/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ip8jnL1aPiaPeKINCqaTEbvBFDmVx9dXQEBZ2HOBRXPD1eabGNqP/bKlsIcp7U2lGxiXd5xIhoFcmY8nM4Hdiw==",
+      "path": "microsoft.extensions.filesystemglobbing/6.0.0",
+      "hashPath": "microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/HggWBbTwy8TgebGSX5DBZ24ndhzi93sHUBDvP1IxbZD7FDokYzdAr6+vbWGjw2XAfR2EJ1sfKUotpjHnFWPxA==",
+      "path": "microsoft.extensions.logging.abstractions/6.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9+PnzmQFfEFNR9J2aDTfJGGupShHjOuGw4VUv+JB044biSHrnmCIMD+mJHmb2H7YryrfBEXDurxQ47gJZdCKNQ==",
+      "path": "microsoft.extensions.primitives/6.0.0",
+      "hashPath": "microsoft.extensions.primitives.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.ML.OnnxRuntime/1.17.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fkC8yYW2WH17hp94PrbG4Zz7XP49K2FyjdmEvUZ+jY0U2l5UzRzj6h01quRCEeUHAlbzCpBwViFJfv6y64buCA==",
+      "path": "microsoft.ml.onnxruntime/1.17.1",
+      "hashPath": "microsoft.ml.onnxruntime.1.17.1.nupkg.sha512"
+    },
+    "Microsoft.ML.OnnxRuntime.Managed/1.17.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eQWP47/pXr6aXsoZTLYNdj7DGOL5oosnYyM+0xzhjLo0qCTS4+rVzj6Y2RrET07tMaImlYD2vTRq6so+MzHL1g==",
+      "path": "microsoft.ml.onnxruntime.managed/1.17.1",
+      "hashPath": "microsoft.ml.onnxruntime.managed.1.17.1.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.1": {
       "type": "package",
       "serviceable": true,
@@ -760,6 +1411,13 @@
       "sha512": "sha512-+iaFSUq0Cp+B9s1sUqDwB3PvQ5HdWWvRE50WsAw1PL8smD3VZNbe0P786E4Yfu7LHM7jeqkulOwjk2CoihsZeg==",
       "path": "opencvsharp4/4.10.0.20240616",
       "hashPath": "opencvsharp4.4.10.0.20240616.nupkg.sha512"
+    },
+    "OpenCvSharp4.Extensions/4.10.0.20240616": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bECtlodf4yuyw04sSvp2nHHWh7REKHKNIN3B4AzqNHxg62nhe24DxvVzBdfi0Innji7TAoc2QIbOPePKZA3ZQg==",
+      "path": "opencvsharp4.extensions/4.10.0.20240616",
+      "hashPath": "opencvsharp4.extensions.4.10.0.20240616.nupkg.sha512"
     },
     "OpenCvSharp4.runtime.win/4.10.0.20240616": {
       "type": "package",
@@ -915,6 +1573,27 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
     },
+    "SixLabors.Fonts/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IY+i5JsUoFTyLvNOlLFUak4nJajSZdfxYqCbDCSYeGDGwHNBtJo0ICduAFGaYaqdL41+YHn7LMrp1AwIU/29Ag==",
+      "path": "sixlabors.fonts/2.0.3",
+      "hashPath": "sixlabors.fonts.2.0.3.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/3.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lFIdxgGDA5iYkUMRFOze7BGLcdpoLFbR+a20kc1W7NepvzU7ejtxtWOg9RvgG7kb9tBoJ3ONYOK6kLil/dgF1w==",
+      "path": "sixlabors.imagesharp/3.1.4",
+      "hashPath": "sixlabors.imagesharp.3.1.4.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp.Drawing/2.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Bo8MeLEhKlZTSV29lh1iZmKVnLFvp+lNPVIo6X1Nu/G3xVwYuhPBjTuxUNhO6bxsVR9tLDuWZULxHSJAXu6LFw==",
+      "path": "sixlabors.imagesharp.drawing/2.1.3",
+      "hashPath": "sixlabors.imagesharp.drawing.2.1.3.nupkg.sha512"
+    },
     "System.Collections/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -928,6 +1607,13 @@
       "sha512": "sha512-ztl69Xp0Y/UXCL+3v3tEU+lIy+bvjKNUmopn1wep/a291pVPK7dxBd6T7WnlQqRog+d1a/hSsgRsmFnIBKTPLQ==",
       "path": "system.collections.concurrent/4.3.0",
       "hashPath": "system.collections.concurrent.4.3.0.nupkg.sha512"
+    },
+    "System.Configuration.ConfigurationManager/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7T+m0kDSlIPTHIkPMIu6m6tV6qsMqJpvQWW2jIc2qi7sn40qxFo0q+7mEQAhMPXZHMKnWrnv47ntGlM/ejvw3g==",
+      "path": "system.configuration.configurationmanager/6.0.0",
+      "hashPath": "system.configuration.configurationmanager.6.0.0.nupkg.sha512"
     },
     "System.Device.Gpio/3.2.0": {
       "type": "package",
@@ -1118,6 +1804,13 @@
       "path": "system.runtime.numerics/4.3.0",
       "hashPath": "system.runtime.numerics.4.3.0.nupkg.sha512"
     },
+    "System.Security.AccessControl/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AUADIc0LIEQe7MzC+I0cl0rAT8RrTAKFHl53yHjEUzNVIaUlhFY11vc2ebiVJzVBuOzun6F7FBA+8KAbGTTedQ==",
+      "path": "system.security.accesscontrol/6.0.0",
+      "hashPath": "system.security.accesscontrol.6.0.0.nupkg.sha512"
+    },
     "System.Security.Claims/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1167,12 +1860,26 @@
       "path": "system.security.cryptography.primitives/4.3.0",
       "hashPath": "system.security.cryptography.primitives.4.3.0.nupkg.sha512"
     },
+    "System.Security.Cryptography.ProtectedData/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rp1gMNEZpvx9vP0JW0oHLxlf8oSiQgtno77Y4PLUBjSiDYoD77Y8uXHr1Ea5XG4/pIKhqAdxZ8v8OTUtqo9PeQ==",
+      "path": "system.security.cryptography.protecteddata/6.0.0",
+      "hashPath": "system.security.cryptography.protecteddata.6.0.0.nupkg.sha512"
+    },
     "System.Security.Cryptography.X509Certificates/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-t2Tmu6Y2NtJ2um0RtcuhP7ZdNNxXEgUm2JeoA/0NvlMjAhKCnM1NX07TDl3244mVp3QU6LPEhT3HTtH1uF7IYw==",
       "path": "system.security.cryptography.x509certificates/4.3.0",
       "hashPath": "system.security.cryptography.x509certificates.4.3.0.nupkg.sha512"
+    },
+    "System.Security.Permissions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T/uuc7AklkDoxmcJ7LGkyX1CcSviZuLCa4jg3PekfJ7SU0niF0IVTXwUiNVP9DSpzou2PpxJ+eNY2IfDM90ZCg==",
+      "path": "system.security.permissions/6.0.0",
+      "hashPath": "system.security.permissions.6.0.0.nupkg.sha512"
     },
     "System.Security.Principal/4.3.0": {
       "type": "package",
@@ -1194,6 +1901,20 @@
       "sha512": "sha512-BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "path": "system.text.encoding/4.3.0",
       "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vg8eB5Tawm1IFqj4TVK1czJX89rhFxJo9ELqc/Eiq0eXy13RK00eubyU6TJE6y+GQXjyV5gSfiewDUZjQgSE0w==",
+      "path": "system.text.encodings.web/6.0.0",
+      "hashPath": "system.text.encodings.web.6.0.0.nupkg.sha512"
+    },
+    "System.Text.Json/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zaJsHfESQvJ11vbXnNlkrR46IaMULk/gHxYsJphzSF+07kTjPHv+Oc14w6QEOfo3Q4hqLJgStUaYB9DBl0TmWg==",
+      "path": "system.text.json/6.0.0",
+      "hashPath": "system.text.json.6.0.0.nupkg.sha512"
     },
     "System.Threading/4.3.0": {
       "type": "package",
@@ -1236,6 +1957,13 @@
       "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    },
+    "System.Windows.Extensions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
+      "path": "system.windows.extensions/6.0.0",
+      "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "Unosquare.Raspberry.Abstractions/0.4.1": {
       "type": "package",

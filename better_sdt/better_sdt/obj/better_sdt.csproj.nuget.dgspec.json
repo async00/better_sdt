@@ -49,7 +49,15 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BarCode": {
+              "target": "Package",
+              "version": "[2024.7.2, )"
+            },
             "OpenCvSharp4": {
+              "target": "Package",
+              "version": "[4.10.0.20240616, )"
+            },
+            "OpenCvSharp4.Extensions": {
               "target": "Package",
               "version": "[4.10.0.20240616, )"
             },
