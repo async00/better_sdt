@@ -72,6 +72,10 @@ namespace better_sdt
                 case "open":
                     BitCommunication.OpenPort();
                     break;
+                case "qrread":
+                    QrSensor.StartListener();
+                    break;
+
                 default:
                     LogSys.ErrorLog("Mexec ? command not found ");
                     break;
