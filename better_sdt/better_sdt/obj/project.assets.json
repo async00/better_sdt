@@ -33,6 +33,28 @@
           }
         }
       },
+      "Microsoft.Win32.SystemEvents/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "OpenCvSharp4/4.10.0.20240616": {
         "type": "package",
         "dependencies": {
@@ -383,6 +405,25 @@
           "ref/netstandard1.5/_._": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/8.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "System.Globalization/4.3.0": {
@@ -1246,16 +1287,22 @@
           }
         }
       },
-      "ZXing.Net/0.16.9": {
+      "ZXing.Net/0.14.0": {
         "type": "package",
         "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
+          "lib/net40/zxing.dll": {
+            "related": ".pdb;.presentation.pdb;.presentation.XML;.XML"
+          },
+          "lib/net40/zxing.presentation.dll": {
+            "related": ".pdb;.XML"
           }
         },
         "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
+          "lib/net40/zxing.dll": {
+            "related": ".pdb;.presentation.pdb;.presentation.XML;.XML"
+          },
+          "lib/net40/zxing.presentation.dll": {
+            "related": ".pdb;.XML"
           }
         }
       }
@@ -1328,6 +1375,41 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
+      ]
+    },
+    "Microsoft.Win32.SystemEvents/8.0.0": {
+      "sha512": "9opKRyOKMCi2xJ7Bj7kxtZ1r9vbzosMvRrdEhVhDz8j8MoBGgB+WmC94yH839NPH+BclAjtQ/pyagvi/8gDLkw==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "lib/net462/Microsoft.Win32.SystemEvents.dll",
+        "lib/net462/Microsoft.Win32.SystemEvents.xml",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
       ]
     },
     "OpenCvSharp4/4.10.0.20240616": {
@@ -2007,6 +2089,46 @@
         "ref/xamarinwatchos10/_._",
         "system.diagnostics.tracing.4.3.0.nupkg.sha512",
         "system.diagnostics.tracing.nuspec"
+      ]
+    },
+    "System.Drawing.Common/8.0.8": {
+      "sha512": "4ZM1wvLjz9nVVExsfPAaSl/qOvU+QNedJL5rQ+2Wbow+iGeyO0e7XN07707rMBgaffEeeLrCZBwC0oHUuvRdPw==",
+      "type": "package",
+      "path": "system.drawing.common/8.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Drawing.Common.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Drawing.Common.dll",
+        "lib/net462/System.Drawing.Common.pdb",
+        "lib/net462/System.Drawing.Common.xml",
+        "lib/net6.0/System.Drawing.Common.dll",
+        "lib/net6.0/System.Drawing.Common.pdb",
+        "lib/net6.0/System.Drawing.Common.xml",
+        "lib/net7.0/System.Drawing.Common.dll",
+        "lib/net7.0/System.Drawing.Common.pdb",
+        "lib/net7.0/System.Drawing.Common.xml",
+        "lib/net8.0/System.Drawing.Common.dll",
+        "lib/net8.0/System.Drawing.Common.pdb",
+        "lib/net8.0/System.Drawing.Common.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.pdb",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "system.drawing.common.8.0.8.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Globalization/4.3.0": {
@@ -4053,86 +4175,64 @@
         "unosquare.swan.lite.nuspec"
       ]
     },
-    "ZXing.Net/0.16.9": {
-      "sha512": "7WaVMHklpT3Ye2ragqRIwlFRsb6kOk63BOGADV0fan3ulVfGLUYkDi5yNUsZS/7FVNkWbtHAlDLmu4WnHGfqvQ==",
+    "ZXing.Net/0.14.0": {
+      "sha512": "iuTglUbRwPB8C3pb0bXzTD6P5mZHPMTIwC9fhequ1PbYXXp3kvH/abje7hBU7Vw2SUGzsUAZ6gOv34cy6DoTmA==",
       "type": "package",
-      "path": "zxing.net/0.16.9",
+      "path": "zxing.net/0.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/native/zxing.XML",
-        "lib/native/zxing.pri",
-        "lib/native/zxing.winmd",
+        "lib/MonoAndroid/zxing.monoandroid.dll",
+        "lib/MonoAndroid/zxing.monoandroid.pdb",
+        "lib/MonoAndroid/zxing.monoandroid.xml",
+        "lib/native/ZXing.XML",
+        "lib/native/ZXing.pdb",
+        "lib/native/ZXing.pri",
+        "lib/native/ZXing.winmd",
         "lib/net20-cf/zxing.ce2.0.dll",
+        "lib/net20-cf/zxing.ce2.0.pdb",
         "lib/net20-cf/zxing.ce2.0.xml",
         "lib/net20/zxing.XML",
         "lib/net20/zxing.dll",
+        "lib/net20/zxing.pdb",
         "lib/net35-cf/zxing.ce3.5.dll",
+        "lib/net35-cf/zxing.ce3.5.pdb",
         "lib/net35-cf/zxing.ce3.5.xml",
         "lib/net35/zxing.XML",
         "lib/net35/zxing.dll",
+        "lib/net35/zxing.pdb",
         "lib/net40/zxing.XML",
         "lib/net40/zxing.dll",
+        "lib/net40/zxing.pdb",
         "lib/net40/zxing.presentation.XML",
         "lib/net40/zxing.presentation.dll",
-        "lib/net45/zxing.XML",
-        "lib/net45/zxing.dll",
-        "lib/net45/zxing.presentation.XML",
-        "lib/net45/zxing.presentation.dll",
-        "lib/net461/zxing.XML",
-        "lib/net461/zxing.dll",
-        "lib/net461/zxing.presentation.XML",
-        "lib/net461/zxing.presentation.dll",
-        "lib/net47/zxing.XML",
-        "lib/net47/zxing.dll",
-        "lib/net47/zxing.presentation.XML",
-        "lib/net47/zxing.presentation.dll",
-        "lib/net48/zxing.XML",
-        "lib/net48/zxing.dll",
-        "lib/net48/zxing.presentation.XML",
-        "lib/net48/zxing.presentation.dll",
-        "lib/net5.0/zxing.XML",
-        "lib/net5.0/zxing.dll",
-        "lib/net6.0/zxing.XML",
-        "lib/net6.0/zxing.dll",
-        "lib/net7.0/zxing.XML",
-        "lib/net7.0/zxing.dll",
-        "lib/netcoreapp3.0/zxing.dll",
-        "lib/netcoreapp3.0/zxing.xml",
-        "lib/netcoreapp3.1/zxing.dll",
-        "lib/netcoreapp3.1/zxing.xml",
-        "lib/netstandard1.0/zxing.dll",
-        "lib/netstandard1.0/zxing.xml",
-        "lib/netstandard1.1/zxing.dll",
-        "lib/netstandard1.1/zxing.xml",
-        "lib/netstandard1.3/zxing.dll",
-        "lib/netstandard1.3/zxing.xml",
-        "lib/netstandard2.0/zxing.dll",
-        "lib/netstandard2.0/zxing.xml",
-        "lib/netstandard2.1/zxing.dll",
-        "lib/netstandard2.1/zxing.xml",
+        "lib/net40/zxing.presentation.pdb",
         "lib/portable-win+net40+sl4+sl5+wp7+wp71+wp8/zxing.portable.XML",
         "lib/portable-win+net40+sl4+sl5+wp7+wp71+wp8/zxing.portable.dll",
+        "lib/portable-win+net40+sl4+sl5+wp7+wp71+wp8/zxing.portable.pdb",
         "lib/sl3-wp/zxing.wp7.0.XML",
         "lib/sl3-wp/zxing.wp7.0.dll",
+        "lib/sl3-wp/zxing.wp7.0.pdb",
         "lib/sl4-wp71/zxing.wp7.1.XML",
         "lib/sl4-wp71/zxing.wp7.1.dll",
+        "lib/sl4-wp71/zxing.wp7.1.pdb",
         "lib/sl4/zxing.sl4.XML",
         "lib/sl4/zxing.sl4.dll",
+        "lib/sl4/zxing.sl4.pdb",
         "lib/sl5/zxing.sl5.XML",
         "lib/sl5/zxing.sl5.dll",
-        "lib/uap10/zxing.dll",
-        "lib/uap10/zxing.pri",
-        "lib/uap10/zxing.xml",
+        "lib/sl5/zxing.sl5.pdb",
         "lib/windows8-managed/zxing.winrt.XML",
         "lib/windows8-managed/zxing.winrt.dll",
-        "lib/windows8/zxing.XML",
-        "lib/windows8/zxing.pri",
-        "lib/windows8/zxing.winmd",
+        "lib/windows8-managed/zxing.winrt.pdb",
+        "lib/windows8/ZXing.XML",
+        "lib/windows8/ZXing.pdb",
+        "lib/windows8/ZXing.pri",
+        "lib/windows8/ZXing.winmd",
         "lib/wp8/zxing.wp8.0.XML",
         "lib/wp8/zxing.wp8.0.dll",
-        "logo.jpg",
-        "zxing.net.0.16.9.nupkg.sha512",
+        "lib/wp8/zxing.wp8.0.pdb",
+        "zxing.net.0.14.0.nupkg.sha512",
         "zxing.net.nuspec"
       ]
     }
@@ -4142,9 +4242,10 @@
       "OpenCvSharp4 >= 4.10.0.20240616",
       "OpenCvSharp4.runtime.win >= 4.10.0.20240616",
       "System.Device.Gpio >= 3.2.0",
+      "System.Drawing.Common >= 8.0.8",
       "System.IO.Ports >= 8.0.0",
       "Unosquare.Raspberry.IO >= 0.27.1",
-      "ZXing.Net >= 0.16.9"
+      "ZXing.Net >= 0.14.0"
     ]
   },
   "packageFolders": {
@@ -4208,6 +4309,10 @@
             "target": "Package",
             "version": "[3.2.0, )"
           },
+          "System.Drawing.Common": {
+            "target": "Package",
+            "version": "[8.0.8, )"
+          },
           "System.IO.Ports": {
             "target": "Package",
             "version": "[8.0.0, )"
@@ -4218,7 +4323,7 @@
           },
           "ZXing.Net": {
             "target": "Package",
-            "version": "[0.16.9, )"
+            "version": "[0.14.0, )"
           }
         },
         "imports": [
@@ -4240,5 +4345,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ZXing.Net 0.14.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "ZXing.Net",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

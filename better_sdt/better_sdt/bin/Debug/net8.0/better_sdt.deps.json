@@ -11,9 +11,10 @@
           "OpenCvSharp4": "4.10.0.20240616",
           "OpenCvSharp4.runtime.win": "4.10.0.20240616",
           "System.Device.Gpio": "3.2.0",
+          "System.Drawing.Common": "8.0.8",
           "System.IO.Ports": "8.0.0",
           "Unosquare.Raspberry.IO": "0.27.1",
-          "ZXing.Net": "0.16.9"
+          "ZXing.Net": "0.14.0"
         },
         "runtime": {
           "better_sdt.dll": {}
@@ -26,6 +27,22 @@
           "Microsoft.NETCore.Platforms": "1.1.1",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "Microsoft.Win32.SystemEvents/8.0.0": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
         }
       },
       "OpenCvSharp4/4.10.0.20240616": {
@@ -210,6 +227,17 @@
           "Microsoft.NETCore.Platforms": "1.1.1",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Drawing.Common/8.0.8": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.824.36606"
+          }
         }
       },
       "System.Globalization/4.3.0": {
@@ -678,11 +706,15 @@
           }
         }
       },
-      "ZXing.Net/0.16.9": {
+      "ZXing.Net/0.14.0": {
         "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "assemblyVersion": "0.16.9.0",
-            "fileVersion": "0.16.9.0"
+          "lib/net40/zxing.dll": {
+            "assemblyVersion": "0.14.0.0",
+            "fileVersion": "0.14.0.0"
+          },
+          "lib/net40/zxing.presentation.dll": {
+            "assemblyVersion": "0.14.0.0",
+            "fileVersion": "0.14.0.0"
           }
         }
       }
@@ -714,6 +746,13 @@
       "sha512": "sha512-9ZQKCWxH7Ijp9BfahvL2Zyf1cJIk8XYLF6Yjzr2yi0b2cOut/HQ31qf1ThHAgCc3WiZMdnWcfJCgN82/0UunxA==",
       "path": "microsoft.win32.primitives/4.3.0",
       "hashPath": "microsoft.win32.primitives.4.3.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9opKRyOKMCi2xJ7Bj7kxtZ1r9vbzosMvRrdEhVhDz8j8MoBGgB+WmC94yH839NPH+BclAjtQ/pyagvi/8gDLkw==",
+      "path": "microsoft.win32.systemevents/8.0.0",
+      "hashPath": "microsoft.win32.systemevents.8.0.0.nupkg.sha512"
     },
     "OpenCvSharp4/4.10.0.20240616": {
       "type": "package",
@@ -917,6 +956,13 @@
       "sha512": "sha512-rswfv0f/Cqkh78rA5S8eN8Neocz234+emGCtTF3lxPY96F+mmmUen6tbn0glN6PMvlKQb9bPAY5e9u7fgPTkKw==",
       "path": "system.diagnostics.tracing/4.3.0",
       "hashPath": "system.diagnostics.tracing.4.3.0.nupkg.sha512"
+    },
+    "System.Drawing.Common/8.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4ZM1wvLjz9nVVExsfPAaSl/qOvU+QNedJL5rQ+2Wbow+iGeyO0e7XN07707rMBgaffEeeLrCZBwC0oHUuvRdPw==",
+      "path": "system.drawing.common/8.0.8",
+      "hashPath": "system.drawing.common.8.0.8.nupkg.sha512"
     },
     "System.Globalization/4.3.0": {
       "type": "package",
@@ -1219,12 +1265,12 @@
       "path": "unosquare.swan.lite/3.0.0",
       "hashPath": "unosquare.swan.lite.3.0.0.nupkg.sha512"
     },
-    "ZXing.Net/0.16.9": {
+    "ZXing.Net/0.14.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7WaVMHklpT3Ye2ragqRIwlFRsb6kOk63BOGADV0fan3ulVfGLUYkDi5yNUsZS/7FVNkWbtHAlDLmu4WnHGfqvQ==",
-      "path": "zxing.net/0.16.9",
-      "hashPath": "zxing.net.0.16.9.nupkg.sha512"
+      "sha512": "sha512-iuTglUbRwPB8C3pb0bXzTD6P5mZHPMTIwC9fhequ1PbYXXp3kvH/abje7hBU7Vw2SUGzsUAZ6gOv34cy6DoTmA==",
+      "path": "zxing.net/0.14.0",
+      "hashPath": "zxing.net.0.14.0.nupkg.sha512"
     }
   }
 }

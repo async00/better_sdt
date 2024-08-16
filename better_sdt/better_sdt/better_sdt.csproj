@@ -8,12 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <COMReference Include="{d37e2a3e-8545-3a39-9f4f-31827c9124ab}">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>4</VersionMinor>
+      <VersionMajor>2</VersionMajor>
+      <Guid>d37e2a3e-8545-3a39-9f4f-31827c9124ab</Guid>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="OpenCvSharp4" Version="4.10.0.20240616" />
     <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.10.0.20240616" />
     <PackageReference Include="System.Device.Gpio" Version="3.2.0" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.8" />
     <PackageReference Include="System.IO.Ports" Version="8.0.0" />
     <PackageReference Include="Unosquare.Raspberry.IO" Version="0.27.1" />
-    <PackageReference Include="ZXing.Net" Version="0.16.9" />
+    <PackageReference Include="ZXing.Net" Version="0.14.0" />
   </ItemGroup>
 
 </Project>

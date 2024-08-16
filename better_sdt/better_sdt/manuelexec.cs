@@ -72,12 +72,9 @@ namespace better_sdt
                 case "open":
                     BitCommunication.OpenPort();
                     break;
-                case "qrread":
-                    QRCodeReader qRCodeReader = new QRCodeReader("/dev/video0");
-                    qRCodeReader.Start();
-
+                case "qr":
+                    qryunus.start();
                     break;
-
                 default:
                     LogSys.ErrorLog("Mexec ? command not found ");
                     break;

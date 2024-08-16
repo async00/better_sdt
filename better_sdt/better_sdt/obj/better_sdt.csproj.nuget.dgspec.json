@@ -61,6 +61,10 @@
               "target": "Package",
               "version": "[3.2.0, )"
             },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "System.IO.Ports": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -71,7 +75,7 @@
             },
             "ZXing.Net": {
               "target": "Package",
-              "version": "[0.16.9, )"
+              "version": "[0.14.0, )"
             }
           },
           "imports": [
