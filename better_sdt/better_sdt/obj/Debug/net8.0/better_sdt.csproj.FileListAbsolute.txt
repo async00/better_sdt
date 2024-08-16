@@ -28,3 +28,9 @@ C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Deb
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\unix\lib\net8.0\System.IO.Ports.dll
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.IO.Ports.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\OpenCvSharp.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\zxing.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\win-x64\native\OpenCvSharpExtern.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\win-x64\native\opencv_videoio_ffmpeg4100_64.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\win-x86\native\OpenCvSharpExtern.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\win-x86\native\opencv_videoio_ffmpeg4100.dll

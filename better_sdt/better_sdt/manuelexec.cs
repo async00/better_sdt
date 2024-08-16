@@ -73,7 +73,9 @@ namespace better_sdt
                     BitCommunication.OpenPort();
                     break;
                 case "qrread":
-                    QrSensor.StartListener();
+                    QRCodeReader qRCodeReader = new QRCodeReader("/dev/video0");
+                    qRCodeReader.Start();
+
                     break;
 
                 default:
