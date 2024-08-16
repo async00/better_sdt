@@ -73,7 +73,7 @@ namespace better_sdt
                     BitCommunication.OpenPort();
                     break;
                 case "qr":
-                    qryunus.start();
+                    qrs.start();
                     break;
                 default:
                     LogSys.ErrorLog("Mexec ? command not found ");

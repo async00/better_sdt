@@ -37,5 +37,5 @@ C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Deb
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\obj\Debug\net8.0\better_sdt.csproj.ResolveComReference.cache
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\System.Drawing.Common.dll
-C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\zxing.presentation.dll
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\zxing.presentation.dll
