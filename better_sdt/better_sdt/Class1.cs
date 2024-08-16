@@ -1,20 +1,23 @@
 ﻿using System;
-using IronBarCode;
+using System.Drawing;
+using System.IO;
 using OpenCvSharp;
 using OpenCvSharp.Extensions;
+using ZXing;
 
 class qrs
 {
-    internal static void Start()
+    internal static void start()
     {
-        // VideoCapture ile kamerayı başlat
         using var capture = new VideoCapture(0);
-
         if (!capture.IsOpened())
         {
             Console.WriteLine("Kamera açılamadı.");
             return;
         }
+
+        var barcodeReader = new BarcodeReader();
+        int frameCount = 0;
 
         while (true)
         {
@@ -27,15 +30,16 @@ class qrs
                 break;
             }
 
-            // QR kodunu oku
-            var result = ReadQRCode(frame);
-
-            if (result != null)
+            frameCount++;
+            if (frameCount % 5 == 0) // Her 5 karede bir işlem yap
             {
-                Console.WriteLine("QR Kodu: " + result);
+                var result = ReadQRCode(frame, barcodeReader);
+                if (result != null)
+                {
+                    Console.WriteLine("QR Kodu: " + result.Text);
+                }
             }
 
-            // Çıkmak için 'q' tuşuna basın
             if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Q)
             {
                 break;
@@ -43,10 +47,22 @@ class qrs
         }
     }
 
-    private static string ReadQRCode(Mat frame)
+
+    private static Result ReadQRCode(Mat frame, BarcodeReader barcodeReader)
     {
-        using var bitmap = OpenCvSharp.Extensions.BitmapConverter.ToBitmap(frame);
-        var qrCode = BarcodeReader.QuicklyReadOneBarcode(bitmap);
-        return qrCode?.Text;
+        using var grayFrame = new Mat();
+        Cv2.CvtColor(frame, grayFrame, ColorConversionCodes.BGR2GRAY);
+
+        // Boyutlandırma (isteğe bağlı, performansı artırabilir)
+        var resizedFrame = new Mat();
+        Cv2.Resize(grayFrame, resizedFrame, new OpenCvSharp.Size(640, 480));
+
+        var bytes = resizedFrame.ToBytes(".png");
+        using var bitmapStream = new MemoryStream(bytes);
+        using var bitmap = new System.Drawing.Bitmap(bitmapStream);
+        var result = barcodeReader.Decode(bitmap);
+
+        return result;
     }
+
 }
