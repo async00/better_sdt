@@ -34,6 +34,11 @@ namespace better_sdt
         {
             serialPort.Write(message);
         }   
+        internal static void OpenPort()
+        {
+            serialPort.Open();
+        }
+
         internal static void StartListener()
         {
             threadstatus = true;

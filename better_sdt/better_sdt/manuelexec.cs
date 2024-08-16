@@ -69,6 +69,9 @@ namespace better_sdt
                     LogSys.InfoLog("bye ! exit");
                     manuelexec.Dispose();
                     break;
+                case "open":
+                    BitCommunication.OpenPort();
+                    break;
                 default:
                     LogSys.ErrorLog("Mexec ? command not found ");
                     break;
