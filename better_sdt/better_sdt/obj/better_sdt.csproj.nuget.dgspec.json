@@ -49,9 +49,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "BarCode": {
+            "Emgu.CV": {
               "target": "Package",
-              "version": "[2024.7.2, )"
+              "version": "[4.8.1.5350, )"
+            },
+            "Emgu.CV.runtime.windows": {
+              "target": "Package",
+              "version": "[4.8.1.5350, )"
             },
             "OpenCvSharp4": {
               "target": "Package",
@@ -83,7 +87,7 @@
             },
             "ZXing.Net": {
               "target": "Package",
-              "version": "[0.14.0, )"
+              "version": "[0.16.9, )"
             }
           },
           "imports": [

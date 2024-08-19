@@ -1,68 +1,78 @@
-﻿using System;
+﻿using Emgu.CV;
+using Emgu.CV.CvEnum;
+using Emgu.CV.Structure;
 using System.Drawing;
-using System.IO;
-using OpenCvSharp;
-using OpenCvSharp.Extensions;
-using ZXing;
+using System;
+using System.Collections.Generic;
 
-class qrs
+namespace better_sdt
 {
-    internal static void start()
+
+
+    class qrs
     {
-        using var capture = new VideoCapture(0);
-        if (!capture.IsOpened())
+        private static int qrcounbt = 0;
+        internal static void start()
         {
-            Console.WriteLine("Kamera açılamadı.");
-            return;
-        }
+            // Kamerayı aç
+            VideoCapture capture = new VideoCapture(0); // 0, varsayılan kamerayı temsil eder
+            capture.Set(CapProp.FrameWidth, 1280);  // Çözünürlük ayarla
+            capture.Set(CapProp.FrameHeight, 720); // Çözünürlük ayarla
+            capture.Set(CapProp.Fps, 60);
+            // QR kod dedektörünü oluştur
+            QRCodeDetector qrDetector = new QRCodeDetector();
 
-        var barcodeReader = new BarcodeReader();
-        int frameCount = 0;
+            // Kare tamponu oluştur
+            Queue<Mat> frameBuffer = new Queue<Mat>();
 
-        while (true)
-        {
-            using var frame = new Mat();
-            capture.Read(frame);
-
-            if (frame.Empty())
+            while (true)
             {
-                Console.WriteLine("Görüntü alınamadı.");
-                break;
-            }
+                // Yeni bir kare al ve tampona ekle
+                Mat frame = new Mat();
+                capture.Read(frame);
+                frameBuffer.Enqueue(frame);
 
-            frameCount++;
-            if (frameCount % 5 == 0) // Her 5 karede bir işlem yap
-            {
-                var result = ReadQRCode(frame, barcodeReader);
-                if (result != null)
+                // Tampondaki kareyi işle
+                if (frameBuffer.Count > 0)
                 {
-                    Console.WriteLine("QR Kodu: " + result.Text);
+                    Mat bufferedFrame = frameBuffer.Dequeue();
+
+                    using Mat grayFrame = new Mat();
+                    CvInvoke.CvtColor(bufferedFrame, grayFrame, ColorConversion.Rgb2Gray);
+
+                    CvInvoke.GaussianBlur(grayFrame, grayFrame, new Size(3, 3), 0);
+
+                    // Kontrast artırma
+                    CvInvoke.EqualizeHist(grayFrame, grayFrame);
+                    CvInvoke.MedianBlur(frame, frame, 5);
+
+                    // Eşikleme
+                      CvInvoke.Threshold(bufferedFrame, bufferedFrame, 25, 255, ThresholdType.Binary);
+                       CvInvoke.MorphologyEx(bufferedFrame, bufferedFrame, MorphOp.Close, CvInvoke.GetStructuringElement(ElementShape.Rectangle, new Size(5, 5), new Point(-1, -1)), new Point(-1, -1), 1, BorderType.Default, new MCvScalar(0));
+
+
+                    // QR kodları ara
+                    Mat points = new Mat();
+                    if (qrDetector.Detect(grayFrame, points))
+                    {
+                        string decodedText = qrDetector.Decode(grayFrame, points).Trim();
+                        if (!string.IsNullOrEmpty(decodedText))
+                        {
+                            qrcounbt++;
+                            Console.WriteLine($"{qrcounbt}Decoded QR code: {decodedText}");
+                        }
+                    }
+
+                    // İşlenmiş kareyi ekranda göster
+                    CvInvoke.Imshow("Optimized Frame", grayFrame);
+                    CvInvoke.WaitKey(1);
+
+                    // Kareyi serbest bırak
+                    bufferedFrame.Dispose();
                 }
             }
-
-            if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Q)
-            {
-                break;
-            }
         }
     }
-
-
-    private static Result ReadQRCode(Mat frame, BarcodeReader barcodeReader)
-    {
-        using var grayFrame = new Mat();
-        Cv2.CvtColor(frame, grayFrame, ColorConversionCodes.BGR2GRAY);
-
-        // Boyutlandırma (isteğe bağlı, performansı artırabilir)
-        var resizedFrame = new Mat();
-        Cv2.Resize(grayFrame, resizedFrame, new OpenCvSharp.Size(640, 480));
-
-        var bytes = resizedFrame.ToBytes(".png");
-        using var bitmapStream = new MemoryStream(bytes);
-        using var bitmap = new System.Drawing.Bitmap(bitmapStream);
-        var result = barcodeReader.Decode(bitmap);
-
-        return result;
-    }
-
 }
+
+

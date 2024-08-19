@@ -1,10 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)system.text.json\7.0.3\buildTransitive\net6.0\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\7.0.3\buildTransitive\net6.0\System.Text.Json.targets')" />
     <Import Project="$(NuGetPackageRoot)system.device.gpio\3.2.0\buildTransitive\net5.0\System.Device.Gpio.targets" Condition="Exists('$(NuGetPackageRoot)system.device.gpio\3.2.0\buildTransitive\net5.0\System.Device.Gpio.targets')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.ml.onnxruntime.managed\1.17.1\build\netstandard2.0\Microsoft.ML.OnnxRuntime.Managed.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.ml.onnxruntime.managed\1.17.1\build\netstandard2.0\Microsoft.ML.OnnxRuntime.Managed.targets')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.ml.onnxruntime\1.17.1\build\netstandard2.1\Microsoft.ML.OnnxRuntime.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.ml.onnxruntime\1.17.1\build\netstandard2.1\Microsoft.ML.OnnxRuntime.targets')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
-    <Import Project="$(NuGetPackageRoot)barcode.slim\2024.7.2\build\netstandard2.0\BarCode.Slim.targets" Condition="Exists('$(NuGetPackageRoot)barcode.slim\2024.7.2\build\netstandard2.0\BarCode.Slim.targets')" />
   </ImportGroup>
 </Project>
