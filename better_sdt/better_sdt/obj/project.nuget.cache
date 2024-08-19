@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3dPuRmbH/is=",
+  "dgSpecHash": "J+XKsfXxTx0=",
   "success": true,
   "projectFilePath": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\better_sdt.csproj",
   "expectedPackageFiles": [
@@ -91,8 +91,7 @@
     "C:\\Users\\stati\\.nuget\\packages\\unosquare.raspberry.abstractions\\0.4.1\\unosquare.raspberry.abstractions.0.4.1.nupkg.sha512",
     "C:\\Users\\stati\\.nuget\\packages\\unosquare.raspberry.io\\0.27.1\\unosquare.raspberry.io.0.27.1.nupkg.sha512",
     "C:\\Users\\stati\\.nuget\\packages\\unosquare.swan\\3.0.0\\unosquare.swan.3.0.0.nupkg.sha512",
-    "C:\\Users\\stati\\.nuget\\packages\\unosquare.swan.lite\\3.0.0\\unosquare.swan.lite.3.0.0.nupkg.sha512",
-    "C:\\Users\\stati\\.nuget\\packages\\zxing.net\\0.16.9\\zxing.net.0.16.9.nupkg.sha512"
+    "C:\\Users\\stati\\.nuget\\packages\\unosquare.swan.lite\\3.0.0\\unosquare.swan.lite.3.0.0.nupkg.sha512"
   ],
   "logs": []
 }

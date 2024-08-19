@@ -84,10 +84,6 @@
             "Unosquare.Raspberry.IO": {
               "target": "Package",
               "version": "[0.27.1, )"
-            },
-            "ZXing.Net": {
-              "target": "Package",
-              "version": "[0.16.9, )"
             }
           },
           "imports": [
