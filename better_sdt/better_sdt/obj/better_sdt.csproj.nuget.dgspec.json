@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[4.8.1.5350, )"
             },
+            "Emgu.CV.runtime.ubuntu-x64": {
+              "target": "Package",
+              "version": "[4.8.1.5350, )"
+            },
             "Emgu.CV.runtime.windows": {
               "target": "Package",
               "version": "[4.8.1.5350, )"
