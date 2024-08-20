@@ -7,8 +7,6 @@ using System.Collections.Generic;
 
 namespace better_sdt
 {
-
-
     class qrs
     {
         private static int qrcounbt = 0;
@@ -64,7 +62,7 @@ namespace better_sdt
                     }
 
                     // İşlenmiş kareyi ekranda göster
-                    CvInvoke.Imshow("Optimized Frame", grayFrame);
+                 //   CvInvoke.Imshow("Optimized Frame", grayFrame);
                     CvInvoke.WaitKey(1);
 
                     // Kareyi serbest bırak

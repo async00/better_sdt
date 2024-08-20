@@ -9,6 +9,7 @@
       "better_sdt/1.0.0": {
         "dependencies": {
           "Emgu.CV": "4.8.1.5350",
+          "Emgu.CV.runtime.ubuntu-x64": "4.8.1.5350",
           "Emgu.CV.runtime.windows": "4.8.1.5350",
           "OpenCvSharp4": "4.10.0.20240616",
           "OpenCvSharp4.Extensions": "4.10.0.20240616",
@@ -16,8 +17,7 @@
           "System.Device.Gpio": "3.2.0",
           "System.Drawing.Common": "8.0.8",
           "System.IO.Ports": "8.0.0",
-          "Unosquare.Raspberry.IO": "0.27.1",
-          "ZXing.Net": "0.16.9"
+          "Unosquare.Raspberry.IO": "0.27.1"
         },
         "runtime": {
           "better_sdt.dll": {}
@@ -34,6 +34,18 @@
           "lib/netstandard2.0/Emgu.CV.dll": {
             "assemblyVersion": "4.8.1.5350",
             "fileVersion": "4.8.1.5350"
+          }
+        }
+      },
+      "Emgu.CV.runtime.ubuntu-x64/4.8.1.5350": {
+        "dependencies": {
+          "Emgu.CV": "4.8.1.5350"
+        },
+        "runtimeTargets": {
+          "runtimes/ubuntu-x64/native/libcvextern.so": {
+            "rid": "ubuntu-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -927,14 +939,6 @@
             "fileVersion": "3.0.0.0"
           }
         }
-      },
-      "ZXing.Net/0.16.9": {
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "assemblyVersion": "0.16.9.0",
-            "fileVersion": "0.16.9.0"
-          }
-        }
       }
     }
   },
@@ -950,6 +954,13 @@
       "sha512": "sha512-1jOw9vu3z6uPEF3Z6ubDIYSrIYrv0h+ABINypNKEtKixMKU0ckUFsiX1AKXFE+kBz9vVFKXRVl94B1Mrf23tVA==",
       "path": "emgu.cv/4.8.1.5350",
       "hashPath": "emgu.cv.4.8.1.5350.nupkg.sha512"
+    },
+    "Emgu.CV.runtime.ubuntu-x64/4.8.1.5350": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6MXFo8drF9D3bgxJqeXj5QEodOmg3d9oXMGkGAe4tbMiJaC6d3OZ2aqhIaiLhpmaR6DBAfn7I/6NLGkluH0+9w==",
+      "path": "emgu.cv.runtime.ubuntu-x64/4.8.1.5350",
+      "hashPath": "emgu.cv.runtime.ubuntu-x64.4.8.1.5350.nupkg.sha512"
     },
     "Emgu.CV.runtime.windows/4.8.1.5350": {
       "type": "package",
@@ -1559,13 +1570,6 @@
       "sha512": "sha512-noPwJJl1Q9uparXy1ogtkmyAPGNfSGb0BLT1292nFH1jdMKje6o2kvvrQUvF9Xklj+IoiAI0UzF6Aqxlvo10lw==",
       "path": "unosquare.swan.lite/3.0.0",
       "hashPath": "unosquare.swan.lite.3.0.0.nupkg.sha512"
-    },
-    "ZXing.Net/0.16.9": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7WaVMHklpT3Ye2ragqRIwlFRsb6kOk63BOGADV0fan3ulVfGLUYkDi5yNUsZS/7FVNkWbtHAlDLmu4WnHGfqvQ==",
-      "path": "zxing.net/0.16.9",
-      "hashPath": "zxing.net.0.16.9.nupkg.sha512"
     }
   }
 }
