@@ -11,9 +11,9 @@ namespace better_sdt
     {
         internal static void begin()
         {
-            for (int i = 0; i < 31; i++)
+            for (int i = 0; i < 36; i++)
             {
-                using var capture = new VideoCapture(i);
+                using var capture = new VideoCapture("$/dev/video{i}");
                 Emgu.CV.Mat frame = new Emgu.CV.Mat();
                 capture.Read(frame);
                 if (!frame.IsEmpty)
