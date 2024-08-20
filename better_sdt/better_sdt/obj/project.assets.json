@@ -171,6 +171,28 @@
           }
         }
       },
+      "Microsoft.CSharp/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.1": {
         "type": "package",
         "compile": {
@@ -221,6 +243,61 @@
           "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
             "assetType": "runtime",
             "rid": "win"
+          }
+        }
+      },
+      "MMALSharp/0.6.0": {
+        "type": "package",
+        "dependencies": {
+          "MMALSharp.Common": "0.6.0",
+          "MMALSharp.Processing": "0.6.0",
+          "Microsoft.CSharp": "4.7.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MMALSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MMALSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MMALSharp.Common/0.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.0",
+          "System.Drawing.Common": "4.7.0",
+          "System.Numerics.Vectors": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MMALSharp.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MMALSharp.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MMALSharp.Processing/0.6.0": {
+        "type": "package",
+        "dependencies": {
+          "MMALSharp.Common": "0.6.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.0",
+          "System.Drawing.Common": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MMALSharp.Processing.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MMALSharp.Processing.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -900,6 +977,15 @@
           "ref/netstandard1.3/_._": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Numerics.Vectors/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Reflection/4.3.0": {
@@ -1692,6 +1778,89 @@
         "runtimes/win-x86/native/vcruntime140.dll"
       ]
     },
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "type": "package",
+      "path": "microsoft.csharp/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/Microsoft.CSharp.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/uap10.0.16299/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "microsoft.csharp.4.7.0.nupkg.sha512",
+        "microsoft.csharp.nuspec",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/Microsoft.CSharp.dll",
+        "ref/netcore50/Microsoft.CSharp.xml",
+        "ref/netcore50/de/Microsoft.CSharp.xml",
+        "ref/netcore50/es/Microsoft.CSharp.xml",
+        "ref/netcore50/fr/Microsoft.CSharp.xml",
+        "ref/netcore50/it/Microsoft.CSharp.xml",
+        "ref/netcore50/ja/Microsoft.CSharp.xml",
+        "ref/netcore50/ko/Microsoft.CSharp.xml",
+        "ref/netcore50/ru/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hans/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hant/Microsoft.CSharp.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/Microsoft.CSharp.dll",
+        "ref/netstandard1.0/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/de/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/es/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/fr/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/it/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ja/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ko/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ru/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hans/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hant/Microsoft.CSharp.xml",
+        "ref/netstandard2.0/Microsoft.CSharp.dll",
+        "ref/netstandard2.0/Microsoft.CSharp.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/uap10.0.16299/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Abstractions/3.1.0": {
+      "sha512": "jjo4YXRx6MIpv6DiRxJjSpl+sPP0+5VW0clMEdLyIAz44PPwrDTFrd5PZckIxIXl1kKZ2KK6IL2nkt0+ug2MQg==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.abstractions/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.1": {
       "sha512": "TMBuzAHpTenGbGgk0SMTwyEkyijY/Eae4ZGsFNYJvAr/LDn1ku3Etp3FPxChmDp5HHF3kzJuoaa08N0xjqAJfQ==",
       "type": "package",
@@ -1793,6 +1962,45 @@
         "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll",
         "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "MMALSharp/0.6.0": {
+      "sha512": "8lJnCShSfcsNbw9FxfPTVdLtrMNQUP6JCJVdU7DsIyE2URh/ZzaQC+AjqsWCKh38I6mn2XhT+Ufk2O98uQSW4w==",
+      "type": "package",
+      "path": "mmalsharp/0.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/MMALSharp.dll",
+        "lib/netstandard2.0/MMALSharp.xml",
+        "mmalsharp.0.6.0.nupkg.sha512",
+        "mmalsharp.nuspec"
+      ]
+    },
+    "MMALSharp.Common/0.6.0": {
+      "sha512": "YIHue1vQnubw4wt9x7o2MOHIFfn9Po6fB3gpv9yZAFjEZczhKU92ykaHim/iHp9SjdeSDjr+xbXlvFDmdoYvNg==",
+      "type": "package",
+      "path": "mmalsharp.common/0.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/MMALSharp.Common.dll",
+        "lib/netstandard2.0/MMALSharp.Common.xml",
+        "mmalsharp.common.0.6.0.nupkg.sha512",
+        "mmalsharp.common.nuspec"
+      ]
+    },
+    "MMALSharp.Processing/0.6.0": {
+      "sha512": "QlBqJcIeprHlWNKgWZmHzoOaUjoA/nj6EUAs1eX80dN12mqdaP3ZVdBisTU97ruN9O//hnWmvR1MA4SfeUwWmw==",
+      "type": "package",
+      "path": "mmalsharp.processing/0.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/MMALSharp.Processing.dll",
+        "lib/netstandard2.0/MMALSharp.Processing.xml",
+        "mmalsharp.processing.0.6.0.nupkg.sha512",
+        "mmalsharp.processing.nuspec"
       ]
     },
     "OpenCvSharp4/4.10.0.20240616": {
@@ -3236,6 +3444,49 @@
         "ref/xamarinwatchos10/_._",
         "system.net.sockets.4.3.0.nupkg.sha512",
         "system.net.sockets.nuspec"
+      ]
+    },
+    "System.Numerics.Vectors/4.4.0": {
+      "sha512": "UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.4.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Reflection/4.3.0": {
@@ -4806,6 +5057,7 @@
       "Emgu.CV >= 4.8.1.5350",
       "Emgu.CV.runtime.debian-arm64 >= 4.8.1.5350",
       "Emgu.CV.runtime.windows >= 4.8.1.5350",
+      "MMALSharp >= 0.6.0",
       "OpenCvSharp4 >= 4.10.0.20240616",
       "OpenCvSharp4.Extensions >= 4.10.0.20240616",
       "OpenCvSharp4.runtime.win >= 4.10.0.20240616",
@@ -4875,6 +5127,10 @@
           "Emgu.CV.runtime.windows": {
             "target": "Package",
             "version": "[4.8.1.5350, )"
+          },
+          "MMALSharp": {
+            "target": "Package",
+            "version": "[0.6.0, )"
           },
           "OpenCvSharp4": {
             "target": "Package",
