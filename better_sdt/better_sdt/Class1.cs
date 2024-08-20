@@ -49,7 +49,14 @@ namespace better_sdt
                 Mat frame = new Mat();
                 capture.Read(frame);
                 frameBuffer.Enqueue(frame);
-                
+
+
+                if (frame.IsEmpty)
+                {
+                    Console.WriteLine("Kamera görüntüsü alınamadı veya boş.");
+                    continue;
+                }
+
                 if (frameBuffer.Count > 0)
                 {
                     framecount++;
