@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "s7VkaQvjWmk=",
+  "dgSpecHash": "X8JyR35vkWg=",
   "success": true,
   "projectFilePath": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\better_sdt.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\stati\\.nuget\\packages\\emgu.cv\\4.8.1.5350\\emgu.cv.4.8.1.5350.nupkg.sha512",
-    "C:\\Users\\stati\\.nuget\\packages\\emgu.cv.runtime.ubuntu-x64\\4.8.1.5350\\emgu.cv.runtime.ubuntu-x64.4.8.1.5350.nupkg.sha512",
+    "C:\\Users\\stati\\.nuget\\packages\\emgu.cv.runtime.debian-arm64\\4.8.1.5350\\emgu.cv.runtime.debian-arm64.4.8.1.5350.nupkg.sha512",
     "C:\\Users\\stati\\.nuget\\packages\\emgu.cv.runtime.windows\\4.8.1.5350\\emgu.cv.runtime.windows.4.8.1.5350.nupkg.sha512",
     "C:\\Users\\stati\\.nuget\\packages\\emgu.runtime.windows.msvc.rt.arm64\\19.37.32825\\emgu.runtime.windows.msvc.rt.arm64.19.37.32825.nupkg.sha512",
     "C:\\Users\\stati\\.nuget\\packages\\emgu.runtime.windows.msvc.rt.x64\\19.37.32825\\emgu.runtime.windows.msvc.rt.x64.19.37.32825.nupkg.sha512",

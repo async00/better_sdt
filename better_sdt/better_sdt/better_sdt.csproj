@@ -18,7 +18,7 @@
 
   <ItemGroup>
 	  <PackageReference Include="Emgu.CV" Version="4.8.1.5350" />
-	  <PackageReference Include="Emgu.CV.runtime.ubuntu-x64" Version="4.8.1.5350" />
+	  <PackageReference Include="Emgu.CV.runtime.debian-arm64" Version="4.8.1.5350" />
 	  <PackageReference Include="Emgu.CV.runtime.windows" Version="4.8.1.5350" />
     <PackageReference Include="OpenCvSharp4" Version="4.10.0.20240616" />
     <PackageReference Include="OpenCvSharp4.Extensions" Version="4.10.0.20240616" />

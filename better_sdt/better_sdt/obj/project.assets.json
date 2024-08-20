@@ -21,15 +21,15 @@
           }
         }
       },
-      "Emgu.CV.runtime.ubuntu-x64/4.8.1.5350": {
+      "Emgu.CV.runtime.debian-arm64/4.8.1.5350": {
         "type": "package",
         "dependencies": {
           "Emgu.CV": "4.8.1.5350"
         },
         "runtimeTargets": {
-          "runtimes/ubuntu-x64/native/libcvextern.so": {
+          "runtimes/linux-arm64/native/libcvextern.so": {
             "assetType": "native",
-            "rid": "ubuntu-x64"
+            "rid": "linux-arm64"
           }
         }
       },
@@ -1594,19 +1594,18 @@
         "lib/xamarinios10/Emgu.CV.xml"
       ]
     },
-    "Emgu.CV.runtime.ubuntu-x64/4.8.1.5350": {
-      "sha512": "6MXFo8drF9D3bgxJqeXj5QEodOmg3d9oXMGkGAe4tbMiJaC6d3OZ2aqhIaiLhpmaR6DBAfn7I/6NLGkluH0+9w==",
+    "Emgu.CV.runtime.debian-arm64/4.8.1.5350": {
+      "sha512": "BNAhT+x3jazfuyXwwMBBFedCCLNVtawM8lwes/1D0zI5T7WWZTbntnX7Tbm6UWWyZ9tK92Qq2iz4gjGbC8oNdg==",
       "type": "package",
-      "path": "emgu.cv.runtime.ubuntu-x64/4.8.1.5350",
+      "path": "emgu.cv.runtime.debian-arm64/4.8.1.5350",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
-        "docs/README.md",
-        "emgu.cv.runtime.ubuntu-x64.4.8.1.5350.nupkg.sha512",
-        "emgu.cv.runtime.ubuntu-x64.nuspec",
+        "emgu.cv.runtime.debian-arm64.4.8.1.5350.nupkg.sha512",
+        "emgu.cv.runtime.debian-arm64.nuspec",
         "icon.png",
-        "runtimes/ubuntu-x64/native/libcvextern.so"
+        "runtimes/linux-arm64/native/libcvextern.so"
       ]
     },
     "Emgu.CV.runtime.windows/4.8.1.5350": {
@@ -4805,7 +4804,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Emgu.CV >= 4.8.1.5350",
-      "Emgu.CV.runtime.ubuntu-x64 >= 4.8.1.5350",
+      "Emgu.CV.runtime.debian-arm64 >= 4.8.1.5350",
       "Emgu.CV.runtime.windows >= 4.8.1.5350",
       "OpenCvSharp4 >= 4.10.0.20240616",
       "OpenCvSharp4.Extensions >= 4.10.0.20240616",
@@ -4869,7 +4868,7 @@
             "target": "Package",
             "version": "[4.8.1.5350, )"
           },
-          "Emgu.CV.runtime.ubuntu-x64": {
+          "Emgu.CV.runtime.debian-arm64": {
             "target": "Package",
             "version": "[4.8.1.5350, )"
           },
