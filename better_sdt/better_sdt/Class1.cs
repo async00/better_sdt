@@ -1,36 +1,51 @@
 ﻿using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
-using System.Drawing;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace better_sdt
 {
     class qrs
     {
         private static int qrcounbt = 0;
+
         internal static void start()
         {
-            // Kamerayı aç
-            VideoCapture capture = new VideoCapture(0); // 0, varsayılan kamerayı temsil eder
-            capture.Set(CapProp.FrameWidth, 1280);  // Çözünürlük ayarla
-            capture.Set(CapProp.FrameHeight, 720); // Çözünürlük ayarla
+            // Open the camera
+            VideoCapture capture = new VideoCapture(0); // 0 represents the default camera
+            capture.Set(CapProp.FrameWidth, 1280);  // Set resolution
+            capture.Set(CapProp.FrameHeight, 720);  // Set resolution
             capture.Set(CapProp.Fps, 60);
-            // QR kod dedektörünü oluştur
+
+            // Check if the camera is opened successfully
+            if (!capture.IsOpened)
+            {
+                Console.WriteLine("Failed to open the camera.");
+                return;
+            }
+
+            // Create the QR code detector
             QRCodeDetector qrDetector = new QRCodeDetector();
 
-            // Kare tamponu oluştur
+            // Create a frame buffer
             Queue<Mat> frameBuffer = new Queue<Mat>();
 
             while (true)
             {
-                // Yeni bir kare al ve tampona ekle
                 Mat frame = new Mat();
                 capture.Read(frame);
+
+                // Check if the frame is empty
+                if (frame.IsEmpty)
+                {
+                    Console.WriteLine("Empty frame, skipping...");
+                    continue;
+                }
+
                 frameBuffer.Enqueue(frame);
 
-                // Tampondaki kareyi işle
                 if (frameBuffer.Count > 0)
                 {
                     Mat bufferedFrame = frameBuffer.Dequeue();
@@ -39,17 +54,12 @@ namespace better_sdt
                     CvInvoke.CvtColor(bufferedFrame, grayFrame, ColorConversion.Rgb2Gray);
 
                     CvInvoke.GaussianBlur(grayFrame, grayFrame, new Size(3, 3), 0);
-
-                    // Kontrast artırma
                     CvInvoke.EqualizeHist(grayFrame, grayFrame);
-                    CvInvoke.MedianBlur(frame, frame, 5);
+                    CvInvoke.MedianBlur(grayFrame, grayFrame, 5);
 
-                    // Eşikleme
-                      CvInvoke.Threshold(bufferedFrame, bufferedFrame, 25, 255, ThresholdType.Binary);
-                       CvInvoke.MorphologyEx(bufferedFrame, bufferedFrame, MorphOp.Close, CvInvoke.GetStructuringElement(ElementShape.Rectangle, new Size(5, 5), new Point(-1, -1)), new Point(-1, -1), 1, BorderType.Default, new MCvScalar(0));
+                    CvInvoke.Threshold(grayFrame, grayFrame, 25, 255, ThresholdType.Binary);
+                    CvInvoke.MorphologyEx(grayFrame, grayFrame, MorphOp.Close, CvInvoke.GetStructuringElement(ElementShape.Rectangle, new Size(5, 5), new Point(-1, -1)), new Point(-1, -1), 1, BorderType.Default, new MCvScalar(0));
 
-
-                    // QR kodları ara
                     Mat points = new Mat();
                     if (qrDetector.Detect(grayFrame, points))
                     {
@@ -57,20 +67,16 @@ namespace better_sdt
                         if (!string.IsNullOrEmpty(decodedText))
                         {
                             qrcounbt++;
-                            Console.WriteLine($"{qrcounbt}Decoded QR code: {decodedText}");
+                            Console.WriteLine($"{qrcounbt} Decoded QR code: {decodedText}");
                         }
                     }
 
-                    // İşlenmiş kareyi ekranda göster
-                 //   CvInvoke.Imshow("Optimized Frame", grayFrame);
                     CvInvoke.WaitKey(1);
 
-                    // Kareyi serbest bırak
+                    // Release the frame
                     bufferedFrame.Dispose();
                 }
             }
         }
     }
 }
-
-
