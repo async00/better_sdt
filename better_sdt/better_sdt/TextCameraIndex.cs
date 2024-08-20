@@ -14,7 +14,9 @@ namespace better_sdt
             for (int i = 0; i < 25; i++)
             {
                 using var capture = new VideoCapture(i);
-                if (capture.IsOpened)
+                Emgu.CV.Mat frame = new Emgu.CV.Mat();
+                capture.Read(frame);
+                if (frame.IsEmpty)
                 {
                     Console.WriteLine($"Kamera {i} mevcut ve kullanılabilir.");
                 }
