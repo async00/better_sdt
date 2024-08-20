@@ -1,4 +1,4 @@
-﻿using OpenCvSharp;
+﻿using Emgu.CV;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace better_sdt
             for (int i = 0; i < 25; i++)
             {
                 using var capture = new VideoCapture(i);
-                if (capture.IsOpened())
+                if (capture.IsOpened)
                 {
                     Console.WriteLine($"Kamera {i} mevcut ve kullanılabilir.");
                 }

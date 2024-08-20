@@ -68,7 +68,3 @@ C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Deb
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\win-x64\native\opencv_videoio_ffmpeg481_64.dll
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\win-x86\native\opencv_videoio_ffmpeg481.dll
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\linux-arm64\native\libcvextern.so
-C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\MMALSharp.dll
-C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\MMALSharp.Common.dll
-C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\MMALSharp.Processing.dll
