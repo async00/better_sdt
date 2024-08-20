@@ -11,6 +11,7 @@
           "Emgu.CV": "4.8.1.5350",
           "Emgu.CV.runtime.debian-arm64": "4.8.1.5350",
           "Emgu.CV.runtime.windows": "4.8.1.5350",
+          "MMALSharp": "0.6.0",
           "OpenCvSharp4": "4.10.0.20240616",
           "OpenCvSharp4.Extensions": "4.10.0.20240616",
           "OpenCvSharp4.runtime.win": "4.10.0.20240616",
@@ -211,6 +212,15 @@
           }
         }
       },
+      "Microsoft.CSharp/4.7.0": {},
+      "Microsoft.Extensions.Logging.Abstractions/3.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.100.19.56504"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.1": {},
       "Microsoft.NETCore.Targets/1.1.3": {},
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -233,6 +243,46 @@
             "assetType": "runtime",
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
+      "MMALSharp/0.6.0": {
+        "dependencies": {
+          "MMALSharp.Common": "0.6.0",
+          "MMALSharp.Processing": "0.6.0",
+          "Microsoft.CSharp": "4.7.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MMALSharp.dll": {
+            "assemblyVersion": "0.6.0.0",
+            "fileVersion": "0.6.0.0"
+          }
+        }
+      },
+      "MMALSharp.Common/0.6.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.0",
+          "System.Drawing.Common": "8.0.8",
+          "System.Numerics.Vectors": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MMALSharp.Common.dll": {
+            "assemblyVersion": "0.6.0.0",
+            "fileVersion": "0.6.0.0"
+          }
+        }
+      },
+      "MMALSharp.Processing/0.6.0": {
+        "dependencies": {
+          "MMALSharp.Common": "0.6.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.0",
+          "System.Drawing.Common": "8.0.8"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MMALSharp.Processing.dll": {
+            "assemblyVersion": "0.6.0.0",
+            "fileVersion": "0.6.0.0"
           }
         }
       },
@@ -610,6 +660,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Numerics.Vectors/4.4.0": {},
       "System.Reflection/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
@@ -990,6 +1041,20 @@
       "path": "emgu.runtime.windows.msvc.rt.x86/19.37.32825",
       "hashPath": "emgu.runtime.windows.msvc.rt.x86.19.37.32825.nupkg.sha512"
     },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jjo4YXRx6MIpv6DiRxJjSpl+sPP0+5VW0clMEdLyIAz44PPwrDTFrd5PZckIxIXl1kKZ2KK6IL2nkt0+ug2MQg==",
+      "path": "microsoft.extensions.logging.abstractions/3.1.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.1": {
       "type": "package",
       "serviceable": true,
@@ -1017,6 +1082,27 @@
       "sha512": "sha512-9opKRyOKMCi2xJ7Bj7kxtZ1r9vbzosMvRrdEhVhDz8j8MoBGgB+WmC94yH839NPH+BclAjtQ/pyagvi/8gDLkw==",
       "path": "microsoft.win32.systemevents/8.0.0",
       "hashPath": "microsoft.win32.systemevents.8.0.0.nupkg.sha512"
+    },
+    "MMALSharp/0.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8lJnCShSfcsNbw9FxfPTVdLtrMNQUP6JCJVdU7DsIyE2URh/ZzaQC+AjqsWCKh38I6mn2XhT+Ufk2O98uQSW4w==",
+      "path": "mmalsharp/0.6.0",
+      "hashPath": "mmalsharp.0.6.0.nupkg.sha512"
+    },
+    "MMALSharp.Common/0.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YIHue1vQnubw4wt9x7o2MOHIFfn9Po6fB3gpv9yZAFjEZczhKU92ykaHim/iHp9SjdeSDjr+xbXlvFDmdoYvNg==",
+      "path": "mmalsharp.common/0.6.0",
+      "hashPath": "mmalsharp.common.0.6.0.nupkg.sha512"
+    },
+    "MMALSharp.Processing/0.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QlBqJcIeprHlWNKgWZmHzoOaUjoA/nj6EUAs1eX80dN12mqdaP3ZVdBisTU97ruN9O//hnWmvR1MA4SfeUwWmw==",
+      "path": "mmalsharp.processing/0.6.0",
+      "hashPath": "mmalsharp.processing.0.6.0.nupkg.sha512"
     },
     "OpenCvSharp4/4.10.0.20240616": {
       "type": "package",
@@ -1332,6 +1418,13 @@
       "sha512": "sha512-m6icV6TqQOAdgt5N/9I5KNpjom/5NFtkmGseEH+AK/hny8XrytLH3+b5M8zL/Ycg3fhIocFpUMyl/wpFnVRvdw==",
       "path": "system.net.sockets/4.3.0",
       "hashPath": "system.net.sockets.4.3.0.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==",
+      "path": "system.numerics.vectors/4.4.0",
+      "hashPath": "system.numerics.vectors.4.4.0.nupkg.sha512"
     },
     "System.Reflection/4.3.0": {
       "type": "package",

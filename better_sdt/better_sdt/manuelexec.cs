@@ -75,6 +75,9 @@ namespace better_sdt
                 case "qr":
                     qrs.start();
                     break;
+                case "test":
+                    TestCameraIndex.begin();
+                    break;
                 default:
                     LogSys.ErrorLog("Mexec ? command not found ");
                     break;
