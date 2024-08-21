@@ -75,6 +75,9 @@ namespace better_sdt
                 case "qr":
                     qrs.start();
                     break;
+                case "capture":
+                    iotcamera.saveimage();
+                    break;
                 case "test":
                     TestCameraIndex.begin();
                     break;

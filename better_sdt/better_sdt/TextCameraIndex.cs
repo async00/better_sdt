@@ -13,7 +13,7 @@ namespace better_sdt
         {
             for (int i = 0; i < 36; i++)
             {
-                using var capture = new VideoCapture("$/dev/video{i}");
+                using var capture = new VideoCapture($"/dev/video{i}");
                 Emgu.CV.Mat frame = new Emgu.CV.Mat();
                 capture.Read(frame);
                 if (!frame.IsEmpty)
@@ -24,6 +24,7 @@ namespace better_sdt
                 {
                     Console.WriteLine($"Kamera {i} bulunamadı.");
                 }
+                Thread.Sleep(20);
             }
         }
     }

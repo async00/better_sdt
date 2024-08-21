@@ -68,3 +68,10 @@ C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Deb
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\win-x64\native\opencv_videoio_ffmpeg481_64.dll
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\win-x86\native\opencv_videoio_ffmpeg481.dll
 C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\linux-arm64\native\libcvextern.so
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\Iot.Device.Bindings.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\SixLabors.ImageSharp.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\System.Management.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\UnitsNet.dll
+C:\Users\stati\OneDrive\Belgeler\GitHub\better_sdt\better_sdt\better_sdt\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll

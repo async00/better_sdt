@@ -10,7 +10,7 @@ using System.Diagnostics;
 namespace better_sdt
 {
     class qrs
-    {
+    {   
        
         private static int qrcounbt = 0;
         private static int fps = 0;

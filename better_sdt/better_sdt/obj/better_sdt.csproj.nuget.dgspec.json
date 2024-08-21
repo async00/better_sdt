@@ -61,6 +61,10 @@
               "target": "Package",
               "version": "[4.8.1.5350, )"
             },
+            "Iot.Device.Bindings": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "OpenCvSharp4": {
               "target": "Package",
               "version": "[4.10.0.20240616, )"
