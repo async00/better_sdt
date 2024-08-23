@@ -11,7 +11,7 @@ namespace better_sdt
 {
     class socketcamera
     {
-        internal static void Start()
+        internal static void start()
         {
             // Sunucu oluşturma
             TcpListener listener = new TcpListener(IPAddress.Any, 8000);
