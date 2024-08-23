@@ -40,10 +40,16 @@ namespace better_sdt
                         int totalBytesRead = 0;
                         while (totalBytesRead < dataLength)
                         {
-                            Console.WriteLine("Veri alındı. Toplam byte: " + totalBytesRead);
-                            bytesRead = stream.Read(data, totalBytesRead, dataLength - totalBytesRead);
-                            totalBytesRead += bytesRead;
+                            int bytesRead1 = stream.Read(data, totalBytesRead, dataLength - totalBytesRead);
+                            if (bytesRead1 == 0)
+                            {
+                                Console.WriteLine("Connection closed or error occurred.");
+                                break;
+                            }
+                            totalBytesRead += bytesRead1;
+                            Console.WriteLine($"Received {totalBytesRead} bytes of {dataLength} bytes.");
                         }
+
 
                         // Veriyi işleme
                         using (var memStream = new MemoryStream(data))
