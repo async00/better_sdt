@@ -8,70 +8,77 @@ using Emgu.CV.CvEnum;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Formats.Jpeg;
-using bettersdt;
 
 namespace better_sdt
 {
     class socketcamera
     {
-
         static TcpClient client;
         static NetworkStream stream;
         static byte[] dataBuffer;
+
         internal static void start()
         {
-            client = new TcpClient("127.0.0.1", 8000);
-            while (!client.Connected)
+            while (true)
             {
-
                 try
                 {
-                   
+                    client = new TcpClient("127.0.0.1", 8000);
                     stream = client.GetStream();
                     dataBuffer = new byte[4];
 
-                }
-                catch (Exception e) {
+                    Emgu.CV.QRCodeDetector qrDetector = new Emgu.CV.QRCodeDetector();
 
-                    LogSys.InfoLog("conection waited");
-                }
-               
-
-            }
-            
-
-            Emgu.CV.QRCodeDetector qrDetector = new Emgu.CV.QRCodeDetector();
-
-            while (true)
-            {
-                // Paket başlığını oku (veri uzunluğu)
-                stream.Read(dataBuffer, 0, dataBuffer.Length);
-                int dataLength = BitConverter.ToInt32(dataBuffer, 0);
-                byte[] data = new byte[dataLength];
-
-                int bytesRead = 0;
-                while (bytesRead < dataLength)
-                {
-                    bytesRead += stream.Read(data, bytesRead, dataLength - bytesRead);
-                }
-
-                // Veriyi aç
-                using (var memStream = new MemoryStream(data))
-                {
-                    using (var image = Image.Load<Rgb24>(memStream, new JpegDecoder()))
+                    while (true)
                     {
-                        using (var ms = new MemoryStream())
+                        try
                         {
-                            image.Save(ms, new JpegEncoder());
-                            byte[] imageBytes = ms.ToArray();
+                            // Paket başlığını oku (veri uzunluğu)
+                            stream.Read(dataBuffer, 0, dataBuffer.Length);
+                            int dataLength = BitConverter.ToInt32(dataBuffer, 0);
+                            byte[] data = new byte[dataLength];
 
-                            // Emgu CV formatına çevir
-                            Mat frame = ByteArrayToMat(imageBytes);
+                            int bytesRead = 0;
+                            while (bytesRead < dataLength)
+                            {
+                                bytesRead += stream.Read(data, bytesRead, dataLength - bytesRead);
+                            }
 
-                            // QR kod işlemlerini yap
-                            ProcessFrame(frame, qrDetector);
+                            // Veriyi aç
+                            using (var memStream = new MemoryStream(data))
+                            {
+                                using (var image = Image.Load<Rgb24>(memStream, new JpegDecoder()))
+                                {
+                                    using (var ms = new MemoryStream())
+                                    {
+                                        image.Save(ms, new JpegEncoder());
+                                        byte[] imageBytes = ms.ToArray();
+
+                                        // Emgu CV formatına çevir
+                                        Mat frame = ByteArrayToMat(imageBytes);
+
+                                        // QR kod işlemlerini yap
+                                        ProcessFrame(frame, qrDetector);
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Error processing data: " + e.Message);
                         }
                     }
+                }
+                catch (SocketException e)
+                {
+                    Console.WriteLine("SocketException: " + e.Message);
+                    // Bağlantı sorunları için yeniden bağlanma denemesi
+                    Console.WriteLine("Retrying connection in 5 seconds...");
+                    System.Threading.Thread.Sleep(5000);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Exception: " + e.Message);
                 }
             }
         }
