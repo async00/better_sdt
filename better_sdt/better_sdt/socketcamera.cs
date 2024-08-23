@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Net.Sockets;
+using System.Drawing;
 using System.IO;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
 using Emgu.CV;
 using Emgu.CV.Util;
 using Emgu.CV.Structure;
 using Emgu.CV.CvEnum;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
 
 namespace better_sdt
 {
@@ -36,54 +38,37 @@ namespace better_sdt
                 // Veriyi aç
                 using (var memStream = new MemoryStream(data))
                 {
-                    // Try to load the image
-                    try
+                    using (var image =SixLabors.ImageSharp.Image.Load<Rgb24>(memStream))
                     {
-                        using (var image = Image.Load<Rgb24>(memStream))
+                        using (var ms = new MemoryStream())
                         {
+                            image.Save(ms, SixLabors.ImageSharp.Formats.Jpeg.JpegFormat.Instance);
+                            byte[] imageBytes = ms.ToArray();
+
                             // Emgu CV formatına çevir
-                            Mat frame = ImageToMat(image);
+                            Mat frame = ByteArrayToMat(imageBytes);
 
                             // QR kod işlemlerini yap
                             ProcessFrame(frame, qrDetector);
                         }
                     }
-                    catch (UnknownImageFormatException ex)
-                    {
-                        Console.WriteLine("Error loading image: " + ex.Message);
-                    }
                 }
             }
         }
 
-        private static Mat ImageToMat(Image<Rgb24> image)
+        private static Mat ByteArrayToMat(byte[] imageBytes)
         {
-            // Convert ImageSharp image to byte array
-            byte[] imageBytes = ImageToByteArray(image);
-
-            // Create a Mat from the byte array
-            using (var buffer = new VectorOfByte(imageBytes))
+            Mat mat = new Mat();
+            using (VectorOfByte vec = new VectorOfByte(imageBytes))
             {
-                // Decode the byte array into a Mat
-                Mat mat = new Mat();
-                CvInvoke.Imdecode(buffer, ImreadModes.Color, mat);
-                return mat;
+                CvInvoke.Imdecode(vec, ImreadModes.Color, mat);
             }
-        }
-
-        private static byte[] ImageToByteArray(Image<Rgb24> image)
-        {
-            using (var ms = new MemoryStream())
-            {
-                image.SaveAsBmp(ms); // Save the image as BMP
-                return ms.ToArray();
-            }
+            return mat;
         }
 
         private static void ProcessFrame(Mat frame, Emgu.CV.QRCodeDetector qrDetector)
         {
             // Frame üzerinde QR kod tespit işlemleri yapılabilir
-            // Örneğin:
             Mat grayFrame = new Mat();
             CvInvoke.CvtColor(frame, grayFrame, ColorConversion.Bgr2Gray);
 
