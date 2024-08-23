@@ -102,7 +102,7 @@ namespace better_sdt
 
                 // QR kod işlemleri yapılabilir
                 // Example: Detect QR codes or other processing
-                qrs.initalize(grayFrame); // QR kodu işleme için
+                qrs.initalize(frame); // QR kodu işleme için
 
             }
             catch (Exception ex)
