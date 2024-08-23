@@ -36,13 +36,21 @@ namespace better_sdt
                 // Veriyi aç
                 using (var memStream = new MemoryStream(data))
                 {
-                    using (var image = Image.Load<Rgb24>(memStream))
+                    // Try to load the image
+                    try
                     {
-                        // Emgu CV formatına çevir
-                        Mat frame = ImageToMat(image);
+                        using (var image = Image.Load<Rgb24>(memStream))
+                        {
+                            // Emgu CV formatına çevir
+                            Mat frame = ImageToMat(image);
 
-                        // QR kod işlemlerini yap
-                        ProcessFrame(frame, qrDetector);
+                            // QR kod işlemlerini yap
+                            ProcessFrame(frame, qrDetector);
+                        }
+                    }
+                    catch (UnknownImageFormatException ex)
+                    {
+                        Console.WriteLine("Error loading image: " + ex.Message);
                     }
                 }
             }
