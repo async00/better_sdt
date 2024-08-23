@@ -50,7 +50,7 @@ class socketcamera
 
                     // Gelen görüntüyle işlem yapın
                     // Örneğin: QR kodu okuyabilir ya da görüntüyü kaydedebilirsiniz.
-                    CvInvoke.Imwrite("received_image.jpg", mat);
+                    CvInvoke.Imwrite("/home/async/Desktop/C#/better_sdt/better_sdt/better_sdt/bin/Debug/net8.0/received_image.jpg", mat);
 
                     Thread.Sleep(1000);
                     // Mat nesnesini işleme (QR kod okuma, vb.)
