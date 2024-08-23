@@ -7,6 +7,7 @@ using Emgu.CV.Structure;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Util;
 using System.Threading.Tasks;
+using bettersdt;
 
 namespace better_sdt
 {
@@ -96,22 +97,30 @@ namespace better_sdt
 
         private static void ProcessFrame(byte[] imageBytes)
         {
-            using (var vec = new VectorOfByte(imageBytes))
+            try
             {
-                var frame = new Mat();
-                CvInvoke.Imdecode(vec, ImreadModes.Color, frame);
-
-                if (frame.IsEmpty)
+                using (var vec = new VectorOfByte(imageBytes))
                 {
-                    Console.WriteLine("Empty frame");
-                    return;
-                }
+                    var frame = new Mat();
+                    CvInvoke.Imdecode(vec, ImreadModes.Color, frame);
 
-                // İşlem yapılacaksa buraya yazabilirsiniz
-                // Örneğin:
-                // CvInvoke.CvtColor(frame, grayFrame, ColorConversion.Bgr2Gray);
-                // qrs.initalize(frame);
+                    if (frame.IsEmpty)
+                    {
+                        Console.WriteLine("Empty frame");
+                        return;
+                    }
+
+                    // İşlem yapılacaksa buraya yazabilirsiniz
+                    // Örneğin:
+                    // CvInvoke.CvtColor(frame, grayFrame, ColorConversion.Bgr2Gray);
+                    // qrs.initalize(frame);
+                }
             }
+            catch(Exception ex)
+            {
+                LogSys.ErrorLog(ex.Message);
+            }
+            
         }
     }
 }
