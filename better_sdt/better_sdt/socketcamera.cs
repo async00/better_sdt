@@ -56,7 +56,7 @@ namespace better_sdt
                         {
                             // JPEG verisini doğrudan Emgu CV ile yükle
                             Mat frame = ByteArrayToMat(data);
-                            frame.SetTo(ByteArrayToMat(data));
+                         //   frame.SetTo(ByteArrayToMat(data));
                             if (frame.IsEmpty)
                             {
                                 Console.WriteLine("empty frame");
