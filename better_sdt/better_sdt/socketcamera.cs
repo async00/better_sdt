@@ -56,7 +56,7 @@ namespace better_sdt
                         {
                             // JPEG verisini doğrudan Emgu CV ile yükle
                             Mat frame = ByteArrayToMat(data);
-
+                            frame.SetTo(ByteArrayToMat(data));
                             if (frame.IsEmpty)
                             {
                                 Console.WriteLine("empty frame");
@@ -85,9 +85,7 @@ namespace better_sdt
             Mat mat = new Mat();
             using (VectorOfByte vec = new VectorOfByte(imageBytes))
             {
-                // JPEG verisini decode et
                 CvInvoke.Imdecode(vec, ImreadModes.Color, mat);
-
                 if (mat.IsEmpty)
                 {
                     Console.WriteLine("JPEG verisi decode edilemedi.");
@@ -95,6 +93,7 @@ namespace better_sdt
             }
             return mat;
         }
+
 
 
 
