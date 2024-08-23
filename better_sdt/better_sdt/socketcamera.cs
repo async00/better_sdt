@@ -6,9 +6,6 @@ using Emgu.CV;
 using Emgu.CV.Structure;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Util;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
-using SixLabors.ImageSharp.Formats.Jpeg;
 
 namespace better_sdt
 {
@@ -50,14 +47,11 @@ namespace better_sdt
                         // Veriyi işleme
                         using (var memStream = new MemoryStream(data))
                         {
-                            using (var image = Image.Load<Rgb24>(memStream, new JpegDecoder()))
-                            {
-                                // Emgu CV formatına çevir
-                                Mat frame = ImageToMat(image);
+                            // JPEG verisini doğrudan Emgu CV ile yükle
+                            Mat frame = ByteArrayToMat(data);
 
-                                // QR kod işlemleri yapılabilir
-                                ProcessFrame(frame);
-                            }
+                            // QR kod işlemleri yapılabilir
+                            ProcessFrame(frame);
                         }
                     }
                     catch (Exception ex)
@@ -68,19 +62,14 @@ namespace better_sdt
             }
         }
 
-        private static Mat ImageToMat(Image<Rgb24> image)
+        private static Mat ByteArrayToMat(byte[] imageBytes)
         {
-            using (MemoryStream ms = new MemoryStream())
+            Mat mat = new Mat();
+            using (VectorOfByte vec = new VectorOfByte(imageBytes))
             {
-                image.Save(ms, new JpegEncoder());
-                byte[] imageBytes = ms.ToArray();
-                Mat mat = new Mat();
-                using (VectorOfByte vec = new VectorOfByte(imageBytes))
-                {
-                    CvInvoke.Imdecode(vec, ImreadModes.Color, mat);
-                }
-                return mat;
+                CvInvoke.Imdecode(vec, ImreadModes.Color, mat);
             }
+            return mat;
         }
 
         private static void ProcessFrame(Mat frame)
@@ -88,8 +77,8 @@ namespace better_sdt
             // Frame üzerinde işlem yapılabilir
             Mat grayFrame = new Mat();
             CvInvoke.CvtColor(frame, grayFrame, ColorConversion.Bgr2Gray);
-            qrs.initalize(grayFrame);
-            // İşlem kodları buraya eklenebilir
+
+             qrs.initalize(grayFrame); 
         }
     }
 }
