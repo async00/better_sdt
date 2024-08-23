@@ -52,6 +52,7 @@ class socketcamera
                     // Örneğin: QR kodu okuyabilir ya da görüntüyü kaydedebilirsiniz.
                     CvInvoke.Imwrite("received_image.jpg", mat);
 
+                    Thread.Sleep(1000);
                     // Mat nesnesini işleme (QR kod okuma, vb.)
                     // Örneğin: qrs.initalize(mat);
                 }
