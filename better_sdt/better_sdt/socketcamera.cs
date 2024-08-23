@@ -6,6 +6,7 @@ using Emgu.CV;
 using Emgu.CV.Structure;
 using Emgu.CV.Util;
 using Emgu.CV.CvEnum;
+using bettersdt;
 
 class socketcamera
 {
@@ -28,6 +29,7 @@ class socketcamera
             // Veriyi oku ve bellekte sakla
             while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
             {
+                LogSys.InfoLog("veri geldi ");
                 memoryStream.Write(buffer, 0, bytesRead);
             }
 
@@ -44,6 +46,10 @@ class socketcamera
 
                 // Şimdi img nesnesini kullanabilirsiniz
                 // Örneğin, resmi ekrana gösterebilirsiniz
+                if(mat != null)
+                {
+                    LogSys.ErrorLog("");
+                }
                 CvInvoke.Imshow("Received Image", mat);
                 CvInvoke.WaitKey(0);
             }
