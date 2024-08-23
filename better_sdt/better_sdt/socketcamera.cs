@@ -8,6 +8,7 @@ using Emgu.CV.CvEnum;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Formats.Jpeg;
+using bettersdt;
 
 namespace better_sdt
 {
@@ -16,8 +17,24 @@ namespace better_sdt
         internal static void start()
         {
             TcpClient client = new TcpClient("127.0.0.1", 8000);
-            NetworkStream stream = client.GetStream();
-            byte[] dataBuffer = new byte[4];
+            while (!client.Connected)
+            {
+
+                try
+                {
+                   
+                    NetworkStream stream = client.GetStream();
+                    byte[] dataBuffer = new byte[4];
+
+                }
+                catch (Exception e) {
+
+                    LogSys.InfoLog("conection waited");
+                }
+               
+
+            }
+            
 
             Emgu.CV.QRCodeDetector qrDetector = new Emgu.CV.QRCodeDetector();
 
