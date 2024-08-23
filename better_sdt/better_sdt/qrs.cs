@@ -29,7 +29,7 @@ namespace better_sdt
         internal static void ApplyOp(Emgu.CV.Mat grayFrame, Emgu.CV.Mat resultFrame)
         {
             grayFrame.CopyTo(resultFrame);
-            CvInvoke.Add(resultFrame, new ScalarArray(new MCvScalar(0, 255, 0)), resultFrame);
+            CvInvoke.Add(resultFrame, new ScalarArray(new MCvScalar(0, 255, 0)  ), resultFrame);
             resultFrame = SharpenImage(resultFrame);
             CvInvoke.MedianBlur(resultFrame, resultFrame, 5);
         }

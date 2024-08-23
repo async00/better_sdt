@@ -36,7 +36,7 @@ namespace better_sdt
 
             }
         }
-        private static void doit(string command )
+        private async static void doit(string command )
         {
             if (command.Contains("wr"))
             {
@@ -76,7 +76,7 @@ namespace better_sdt
                     iotcamera.saveimage();
                     break;
                 case "sc":
-                    socketcamera.start();
+                    await socketcamera.StartAsync();
                     break;
                 case "test":
                     TestCameraIndex.begin();
