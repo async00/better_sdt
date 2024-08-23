@@ -40,7 +40,7 @@ namespace better_sdt
                         int totalBytesRead = 0;
                         while (totalBytesRead < dataLength)
                         {
-                            Console.WriteLine("veri alindi");
+                            Console.WriteLine("Veri alındı. Toplam byte: " + totalBytesRead);
                             bytesRead = stream.Read(data, totalBytesRead, dataLength - totalBytesRead);
                             totalBytesRead += bytesRead;
                         }
@@ -50,6 +50,12 @@ namespace better_sdt
                         {
                             // JPEG verisini doğrudan Emgu CV ile yükle
                             Mat frame = ByteArrayToMat(data);
+
+                            if (frame.IsEmpty)
+                            {
+                                Console.WriteLine("Kamera görüntüsü alınamadı veya boş.");
+                                continue; // Boş frame geldiğinde bir sonraki veriyi bekle
+                            }
 
                             // QR kod işlemleri yapılabilir
                             ProcessFrame(frame);
@@ -66,9 +72,16 @@ namespace better_sdt
         private static Mat ByteArrayToMat(byte[] imageBytes)
         {
             Mat mat = new Mat();
-            using (VectorOfByte vec = new VectorOfByte(imageBytes))
+            try
             {
-                CvInvoke.Imdecode(vec, ImreadModes.Color, mat);
+                using (VectorOfByte vec = new VectorOfByte(imageBytes))
+                {
+                    CvInvoke.Imdecode(vec, ImreadModes.Color, mat);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Imdecode error: {ex.Message}");
             }
             return mat;
         }
@@ -77,9 +90,18 @@ namespace better_sdt
         {
             // Frame üzerinde işlem yapılabilir
             Mat grayFrame = new Mat();
-            CvInvoke.CvtColor(frame, grayFrame, ColorConversion.Bgr2Gray);
+            try
+            {
+                CvInvoke.CvtColor(frame, grayFrame, ColorConversion.Bgr2Gray);
 
-             qrs.initalize(grayFrame); 
+                // QR kod işlemleri yapılabilir
+                // Example: Detect QR codes or other processing
+                qrs.initalize(grayFrame); // QR kodu işleme için
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"ProcessFrame error: {ex.Message}");
+            }
         }
     }
 }
