@@ -35,26 +35,21 @@ namespace better_sdt
         }
 
 
-        internal static void start()
+        internal static void initalize(Emgu.CV.Mat frame)
         {
-            capture.Set(CapProp.FrameWidth, 1280);
-            capture.Set(CapProp.FrameHeight, 720);
-            capture.Set(CapProp.Fps, 60);
 
             Emgu.CV.QRCodeDetector qrDetector = new Emgu.CV.QRCodeDetector();
 
             stopwatch.Start();
 
-            while (true)
-            {
-                Emgu.CV.Mat frame = new Emgu.CV.Mat();
-                capture.Read(frame);
+           
+                frame = new Emgu.CV.Mat();
 
                 frameBuffer.Enqueue(frame);
                 if (frame.IsEmpty)
                 {
                     Console.WriteLine("Kamera görüntüsü alınamadı veya boş.");
-                    continue;
+                return;
                 }
 
                 if (frameBuffer.Count > 0)
@@ -81,20 +76,14 @@ namespace better_sdt
                             Console.WriteLine($"{qrcounbt} Decoded QR code: {decodedText}");
                         }
                     }
+                    
 
-                    if (stopwatch.ElapsedMilliseconds >= 1000)
-                    {
-                        fps = (int)(1000.0 / stopwatch.ElapsedMilliseconds * framecount);
-                        stopwatch.Restart();
-                        framecount = 0;
-                    }
-
-                    CvInvoke.PutText(resultFrame, $"FPS: {fps}", new System.Drawing.Point(10, 30), FontFace.HersheySimplex, 1.0, new MCvScalar(0, 255, 0), 2);
-                    CvInvoke.Imshow("QR Code Detection", resultFrame);
-                    CvInvoke.WaitKey(1);
+                //    CvInvoke.PutText(resultFrame, $"FPS: {fps}", new System.Drawing.Point(10, 30), FontFace.HersheySimplex, 1.0, new MCvScalar(0, 255, 0), 2);
+               //     CvInvoke.Imshow("QR Code Detection", resultFrame);
+                 //   CvInvoke.WaitKey(1);
 
                     bufferedFrame.Dispose();
-                }
+                
             }
         }
     }

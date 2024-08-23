@@ -72,9 +72,6 @@ namespace better_sdt
                 case "open":
                     BitCommunication.OpenPort();
                     break;
-                case "qr":
-                    qrs.start();
-                    break;
                 case "capture":
                     iotcamera.saveimage();
                     break;

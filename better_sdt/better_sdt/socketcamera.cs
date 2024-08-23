@@ -88,6 +88,7 @@ namespace better_sdt
             // Frame üzerinde işlem yapılabilir
             Mat grayFrame = new Mat();
             CvInvoke.CvtColor(frame, grayFrame, ColorConversion.Bgr2Gray);
+            qrs.initalize(grayFrame);
             // İşlem kodları buraya eklenebilir
         }
     }
