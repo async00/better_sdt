@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Net.Sockets;
-using System.Drawing;
 using System.IO;
 using Emgu.CV;
-using Emgu.CV.Util;
 using Emgu.CV.Structure;
+using Emgu.CV.Util;
 using Emgu.CV.CvEnum;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
-using SixLabors.ImageSharp.Processing;
+using SixLabors.ImageSharp.Formats.Jpeg;
 
 namespace better_sdt
 {
@@ -38,11 +37,11 @@ namespace better_sdt
                 // Veriyi aç
                 using (var memStream = new MemoryStream(data))
                 {
-                    using (var image =SixLabors.ImageSharp.Image.Load<Rgb24>(memStream))
+                    using (var image = Image.Load<Rgb24>(memStream, new JpegDecoder()))
                     {
                         using (var ms = new MemoryStream())
                         {
-                            image.Save(ms, SixLabors.ImageSharp.Formats.Jpeg.JpegFormat.Instance);
+                            image.Save(ms, new JpegEncoder());
                             byte[] imageBytes = ms.ToArray();
 
                             // Emgu CV formatına çevir
