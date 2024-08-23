@@ -10,11 +10,11 @@ using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Formats.Jpeg;
 
-namespace SocketServer
+namespace better_sdt
 {
-    class Program
+    class socketcamera
     {
-        static void Main(string[] args)
+        internal static void start()
         {
             // Sunucu oluşturma
             TcpListener listener = new TcpListener(IPAddress.Any, 8000);
