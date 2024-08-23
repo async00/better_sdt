@@ -16,7 +16,7 @@ namespace better_sdt
         private static int fps = 0;
         private static int framecount = 0;
         private static Stopwatch stopwatch = new Stopwatch();
-        private static Emgu.CV.VideoCapture capture = new Emgu.CV.VideoCapture(0);
+ //       private static Emgu.CV.VideoCapture capture = new Emgu.CV.VideoCapture(0);
         private static Queue<Emgu.CV.Mat> frameBuffer = new Queue<Emgu.CV.Mat>();
         private static Emgu.CV.Mat SharpenImage(Emgu.CV.Mat inputImage)
         {

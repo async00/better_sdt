@@ -53,16 +53,16 @@ namespace better_sdt
 
                             if (frame.IsEmpty)
                             {
-                                Console.WriteLine("Kamera görüntüsü alınamadı veya boş.");
+                                Console.WriteLine("empty frame");
                                 continue; // Boş frame geldiğinde bir sonraki veriyi bekle
                             }
-
-                            // QR kod işlemleri yapılabilir
-                            ProcessFrame(frame);
                             using (var fs = new FileStream("test.jpg", FileMode.Create, FileAccess.Write))
                             {
                                 fs.Write(data, 0, data.Length);
                             }
+
+                            // QR kod işlemleri yapılabilir
+                            ProcessFrame(frame);
 
                         }
                     }
