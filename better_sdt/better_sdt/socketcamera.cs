@@ -62,13 +62,14 @@ namespace better_sdt
                                 Console.WriteLine("empty frame");
                                 continue; // Boş frame geldiğinde bir sonraki veriyi bekle
                             }
-                            using (var fs = new FileStream("test.jpg", FileMode.Create, FileAccess.Write))
-                            {
-                                fs.Write(data, 0, data.Length);
-                            }
+                            qrs.initalize(frame);
+                      //      using (var fs = new FileStream("test.jpg", FileMode.Create, FileAccess.Write))
+                        //    {
+                       //         fs.Write(data, 0, data.Length);
+                        //    }
 
                             // QR kod işlemleri yapılabilir
-                            ProcessFrame(frame);
+                          //  ProcessFrame(frame);
 
                         }
                     }
