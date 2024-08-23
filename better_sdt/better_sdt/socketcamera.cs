@@ -7,9 +7,9 @@ using Emgu.CV.Structure;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Util;
 
-namespace BetterSdt
+namespace better_sdt
 {
-    class SocketCamera
+    class socketcamera
     {
         internal static void Start()
         {
