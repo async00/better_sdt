@@ -1,113 +1,94 @@
 ﻿using System;
+using System.Net;
 using System.Net.Sockets;
 using System.IO;
 using Emgu.CV;
 using Emgu.CV.Structure;
-using Emgu.CV.Util;
 using Emgu.CV.CvEnum;
+using Emgu.CV.Util;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Formats.Jpeg;
 
-namespace better_sdt
+namespace SocketServer
 {
-    class socketcamera
+    class Program
     {
-        static TcpClient client;
-        static NetworkStream stream;
-        static byte[] dataBuffer;
-
-        internal static void start()
+        static void Main(string[] args)
         {
-            while (true)
+            // Sunucu oluşturma
+            TcpListener listener = new TcpListener(IPAddress.Any, 8000);
+            listener.Start();
+            Console.WriteLine("Server listening on port 8000...");
+
+            // Bağlantı bekleme
+            using (TcpClient client = listener.AcceptTcpClient())
+            using (NetworkStream stream = client.GetStream())
             {
-                try
+                Console.WriteLine("Client connected.");
+
+                while (true)
                 {
-                    client = new TcpClient("127.0.0.1", 8000);
-                    stream = client.GetStream();
-                    dataBuffer = new byte[4];
-
-                    Emgu.CV.QRCodeDetector qrDetector = new Emgu.CV.QRCodeDetector();
-
-                    while (true)
+                    try
                     {
-                        try
+                        // Paket başlığını oku (veri uzunluğu)
+                        byte[] lengthBuffer = new byte[4];
+                        int bytesRead = stream.Read(lengthBuffer, 0, lengthBuffer.Length);
+                        if (bytesRead == 0)
+                            break; // Bağlantı kapalı
+
+                        int dataLength = BitConverter.ToInt32(lengthBuffer, 0);
+                        byte[] data = new byte[dataLength];
+
+                        int totalBytesRead = 0;
+                        while (totalBytesRead < dataLength)
                         {
-                            // Paket başlığını oku (veri uzunluğu)
-                            stream.Read(dataBuffer, 0, dataBuffer.Length);
-                            int dataLength = BitConverter.ToInt32(dataBuffer, 0);
-                            byte[] data = new byte[dataLength];
-
-                            int bytesRead = 0;
-                            while (bytesRead < dataLength)
-                            {
-                                bytesRead += stream.Read(data, bytesRead, dataLength - bytesRead);
-                            }
-
-                            // Veriyi aç
-                            using (var memStream = new MemoryStream(data))
-                            {
-                                using (var image = Image.Load<Rgb24>(memStream, new JpegDecoder()))
-                                {
-                                    using (var ms = new MemoryStream())
-                                    {
-                                        image.Save(ms, new JpegEncoder());
-                                        byte[] imageBytes = ms.ToArray();
-
-                                        // Emgu CV formatına çevir
-                                        Mat frame = ByteArrayToMat(imageBytes);
-
-                                        // QR kod işlemlerini yap
-                                        ProcessFrame(frame, qrDetector);
-                                    }
-                                }
-                            }
+                            bytesRead = stream.Read(data, totalBytesRead, dataLength - totalBytesRead);
+                            totalBytesRead += bytesRead;
                         }
-                        catch (Exception e)
+
+                        // Veriyi işleme
+                        using (var memStream = new MemoryStream(data))
                         {
-                            Console.WriteLine("Error processing data: " + e.Message);
+                            using (var image = Image.Load<Rgb24>(memStream, new JpegDecoder()))
+                            {
+                                // Emgu CV formatına çevir
+                                Mat frame = ImageToMat(image);
+
+                                // QR kod işlemleri yapılabilir
+                                ProcessFrame(frame);
+                            }
                         }
                     }
-                }
-                catch (SocketException e)
-                {
-                    Console.WriteLine("SocketException: " + e.Message);
-                    // Bağlantı sorunları için yeniden bağlanma denemesi
-                    Console.WriteLine("Retrying connection in 5 seconds...");
-                    System.Threading.Thread.Sleep(5000);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Exception: " + e.Message);
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error: {ex.Message}");
+                    }
                 }
             }
         }
 
-        private static Mat ByteArrayToMat(byte[] imageBytes)
+        private static Mat ImageToMat(Image<Rgb24> image)
         {
-            Mat mat = new Mat();
-            using (VectorOfByte vec = new VectorOfByte(imageBytes))
+            using (MemoryStream ms = new MemoryStream())
             {
-                CvInvoke.Imdecode(vec, ImreadModes.Color, mat);
+                image.Save(ms, new JpegEncoder());
+                byte[] imageBytes = ms.ToArray();
+                Mat mat = new Mat();
+                using (VectorOfByte vec = new VectorOfByte(imageBytes))
+                {
+                    CvInvoke.Imdecode(vec, ImreadModes.Color, mat);
+                }
+                return mat;
             }
-            return mat;
         }
 
-        private static void ProcessFrame(Mat frame, Emgu.CV.QRCodeDetector qrDetector)
+        private static void ProcessFrame(Mat frame)
         {
-            // Frame üzerinde QR kod tespit işlemleri yapılabilir
+            // Frame üzerinde işlem yapılabilir
             Mat grayFrame = new Mat();
             CvInvoke.CvtColor(frame, grayFrame, ColorConversion.Bgr2Gray);
-
-            Mat points = new Mat();
-            if (qrDetector.Detect(grayFrame, points))
-            {
-                string decodedText = qrDetector.Decode(grayFrame, points).Trim();
-                if (!string.IsNullOrEmpty(decodedText))
-                {
-                    Console.WriteLine($"Decoded QR code: {decodedText}");
-                }
-            }
+            // İşlem kodları buraya eklenebilir
         }
     }
 }
