@@ -9,7 +9,7 @@ namespace better_sdt
 {
     internal class iotcamera
     {
-        internal static VideoConnectionSettings settings = new VideoConnectionSettings(busId: 0, captureSize: (2592, 1944), pixelFormat: PixelFormat.JPEG);
+        internal static VideoConnectionSettings settings = new VideoConnectionSettings(busId: 0, captureSize: (1280, 720), pixelFormat: PixelFormat.JPEG);
 
 
 
@@ -18,7 +18,7 @@ namespace better_sdt
             using VideoDevice device = VideoDevice.Create(settings);
 
             Console.WriteLine("Smile, you are on camera");
-            device.Capture("ferhaterdogan.jpg");
+            device.Capture("ferhaterdogan.jpeg");
         }
     }
-}
+     }

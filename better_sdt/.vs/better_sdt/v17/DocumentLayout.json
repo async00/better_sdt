@@ -7,16 +7,24 @@
       "RelativeMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|solutionrelative:better_sdt\\manuelexec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|c:\\users\\stati\\onedrive\\belgeler\\github\\better_sdt\\better_sdt\\better_sdt\\iotcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|solutionrelative:better_sdt\\iotcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|c:\\users\\stati\\onedrive\\belgeler\\github\\better_sdt\\better_sdt\\better_sdt\\better_sdt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|solutionrelative:better_sdt\\better_sdt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|c:\\users\\stati\\onedrive\\belgeler\\github\\better_sdt\\better_sdt\\better_sdt\\socketcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|solutionrelative:better_sdt\\socketcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|c:\\users\\stati\\onedrive\\belgeler\\github\\better_sdt\\better_sdt\\better_sdt\\qrs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|solutionrelative:better_sdt\\qrs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|c:\\users\\stati\\onedrive\\belgeler\\github\\better_sdt\\better_sdt\\better_sdt\\iotcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|solutionrelative:better_sdt\\iotcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|c:\\users\\stati\\onedrive\\belgeler\\github\\better_sdt\\better_sdt\\better_sdt\\upins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|solutionrelative:better_sdt\\upins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|c:\\users\\stati\\onedrive\\belgeler\\github\\better_sdt\\better_sdt\\better_sdt\\better_sdt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|solutionrelative:better_sdt\\better_sdt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|c:\\users\\stati\\onedrive\\belgeler\\github\\better_sdt\\better_sdt\\better_sdt\\textcameraindex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\obj\\project.assets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:better_sdt\\obj\\project.assets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|c:\\users\\stati\\onedrive\\belgeler\\github\\better_sdt\\better_sdt\\better_sdt\\upins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|solutionrelative:better_sdt\\upins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72819292-71FE-4CB7-A61D-44D65ED9D182}|better_sdt\\better_sdt.csproj|c:\\users\\stati\\onedrive\\belgeler\\github\\better_sdt\\better_sdt\\better_sdt\\logsys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,11 +70,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "better_sdt",
               "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\better_sdt.csproj",
               "RelativeDocumentMoniker": "better_sdt\\better_sdt.csproj",
@@ -78,25 +82,37 @@
               "RelativeToolTip": "better_sdt\\better_sdt.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-08-19T14:32:01.554Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "socketcamera.cs",
+              "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\socketcamera.cs",
+              "RelativeDocumentMoniker": "better_sdt\\socketcamera.cs",
+              "ToolTip": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\socketcamera.cs",
+              "RelativeToolTip": "better_sdt\\socketcamera.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAgwCIAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T10:21:48.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "iotcamera.cs",
               "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\iotcamera.cs",
               "RelativeDocumentMoniker": "better_sdt\\iotcamera.cs",
               "ToolTip": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\iotcamera.cs",
               "RelativeToolTip": "better_sdt\\iotcamera.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAQAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAUwBgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T14:39:45.576Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TextCameraIndex.cs",
               "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\TextCameraIndex.cs",
               "RelativeDocumentMoniker": "better_sdt\\TextCameraIndex.cs",
@@ -104,31 +120,30 @@
               "RelativeToolTip": "better_sdt\\TextCameraIndex.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAIBJwBUAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T15:45:35.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-20T15:45:35.27Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "qrs.cs",
               "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\qrs.cs",
               "RelativeDocumentMoniker": "better_sdt\\qrs.cs",
               "ToolTip": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\qrs.cs",
               "RelativeToolTip": "better_sdt\\qrs.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAUwDwAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-16T16:36:07.606Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "UPins.cs",
               "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\UPins.cs",
               "RelativeDocumentMoniker": "better_sdt\\UPins.cs",
               "ToolTip": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\UPins.cs",
               "RelativeToolTip": "better_sdt\\UPins.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAIwB4AAAAhAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAIwAsAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T14:15:57.369Z",
               "EditorCaption": ""
@@ -141,14 +156,14 @@
               "RelativeDocumentMoniker": "better_sdt\\manuelexec.cs",
               "ToolTip": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\manuelexec.cs",
               "RelativeToolTip": "better_sdt\\manuelexec.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAADwv04AAAAqAAAA",
+              "ViewState": "AQIAADoAAAAAAAAAAADwv1IAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T13:42:55.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "better_sdt.csproj",
               "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\better_sdt.csproj",
               "RelativeDocumentMoniker": "better_sdt\\better_sdt.csproj",
@@ -156,12 +171,11 @@
               "RelativeToolTip": "better_sdt\\better_sdt.csproj",
               "ViewState": "AQIAAAYAAAAAAAAAAAAgwB0AAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-19T15:03:33.139Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T15:03:33.139Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "VirtualPwm.cs",
               "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\VirtualPwm.cs",
               "RelativeDocumentMoniker": "better_sdt\\VirtualPwm.cs",
@@ -169,12 +183,11 @@
               "RelativeToolTip": "better_sdt\\VirtualPwm.cs",
               "ViewState": "AQIAAD0AAAAAAAAAAAAUwEkAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T13:55:56.164Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T13:55:56.164Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "project.assets.json",
               "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\obj\\project.assets.json",
               "RelativeDocumentMoniker": "better_sdt\\obj\\project.assets.json",
@@ -182,12 +195,11 @@
               "RelativeToolTip": "better_sdt\\obj\\project.assets.json",
               "ViewState": "AQIAAJUAAAAAAAAAAMBdwNwAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-19T16:27:45.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T16:27:45.882Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "cpv.cs",
               "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\cpv.cs",
               "RelativeDocumentMoniker": "better_sdt\\cpv.cs",
@@ -195,12 +207,11 @@
               "RelativeToolTip": "better_sdt\\cpv.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAcwBEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T14:09:32.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T14:09:32.447Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "LogSys.cs",
               "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\LogSys.cs",
               "RelativeDocumentMoniker": "better_sdt\\LogSys.cs",
@@ -208,12 +219,11 @@
               "RelativeToolTip": "better_sdt\\LogSys.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T13:40:55.001Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T13:40:55.001Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\Program.cs",
               "RelativeDocumentMoniker": "better_sdt\\Program.cs",
@@ -221,12 +231,11 @@
               "RelativeToolTip": "better_sdt\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T13:33:22.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T13:33:22.949Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "BitCommunication.cs",
               "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\BitCommunication.cs",
               "RelativeDocumentMoniker": "better_sdt\\BitCommunication.cs",
@@ -234,12 +243,11 @@
               "RelativeToolTip": "better_sdt\\BitCommunication.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAnwCIAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T19:48:42.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-14T19:48:42.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "PwmEngine.cs",
               "DocumentMoniker": "C:\\Users\\stati\\OneDrive\\Belgeler\\GitHub\\better_sdt\\better_sdt\\better_sdt\\PwmEngine.cs",
               "RelativeDocumentMoniker": "better_sdt\\PwmEngine.cs",
@@ -247,8 +255,7 @@
               "RelativeToolTip": "better_sdt\\PwmEngine.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAApwBYAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T13:03:59.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-14T13:03:59.186Z"
             }
           ]
         }

@@ -78,6 +78,9 @@ namespace better_sdt
                 case "capture":
                     iotcamera.saveimage();
                     break;
+                case "sc":
+                    socketcamera.start();
+                    break;
                 case "test":
                     TestCameraIndex.begin();
                     break;
