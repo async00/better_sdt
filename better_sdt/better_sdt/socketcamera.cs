@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Net.Sockets;
-using System.Drawing;
 using System.IO;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 using Emgu.CV;
 using Emgu.CV.Util;
 using Emgu.CV.Structure;
@@ -35,30 +36,39 @@ namespace better_sdt
                 // Veriyi aç
                 using (var memStream = new MemoryStream(data))
                 {
-                    Bitmap bitmapFrame = new Bitmap(memStream);
+                    using (var image = Image.Load<Rgb24>(memStream))
+                    {
+                        // Emgu CV formatına çevir
+                        Mat frame = ImageToMat(image);
 
-                    // Emgu CV formatına çevir
-                    Mat frame = BitmapToMat(bitmapFrame);
-
-                    // QR kod işlemlerini yap
-                    ProcessFrame(frame, qrDetector);
+                        // QR kod işlemlerini yap
+                        ProcessFrame(frame, qrDetector);
+                    }
                 }
             }
         }
 
-        private static Mat BitmapToMat(Bitmap bitmap)
+        private static Mat ImageToMat(Image<Rgb24> image)
         {
-            // Bitmap'i byte dizisine çevir
-            using (MemoryStream ms = new MemoryStream())
+            // Convert ImageSharp image to byte array
+            byte[] imageBytes = ImageToByteArray(image);
+
+            // Create a Mat from the byte array
+            using (var buffer = new VectorOfByte(imageBytes))
             {
-                bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
-                byte[] imageBytes = ms.ToArray();
+                // Decode the byte array into a Mat
                 Mat mat = new Mat();
-                using (VectorOfByte buf = new VectorOfByte(imageBytes))
-                {
-                    CvInvoke.Imdecode(buf, ImreadModes.Color, mat);
-                }
+                CvInvoke.Imdecode(buffer, ImreadModes.Color, mat);
                 return mat;
+            }
+        }
+
+        private static byte[] ImageToByteArray(Image<Rgb24> image)
+        {
+            using (var ms = new MemoryStream())
+            {
+                image.SaveAsBmp(ms); // Save the image as BMP
+                return ms.ToArray();
             }
         }
 
