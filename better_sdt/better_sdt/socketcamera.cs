@@ -7,11 +7,11 @@ using Emgu.CV.Structure;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Util;
 
-namespace better_sdt
+namespace BetterSdt
 {
-    class socketcamera
+    class SocketCamera
     {
-        internal static void start()
+        internal static void Start()
         {
             // Sunucu oluşturma
             TcpListener listener = new TcpListener(IPAddress.Any, 8000);
@@ -34,7 +34,6 @@ namespace better_sdt
                         if (data.Length > 0)
                         {
                             // JPEG verisini doğrudan Emgu CV ile yükle
-                            SaveJpegFrame(data);
                             Mat frame = ByteArrayToMat(data);
 
                             if (frame.IsEmpty)
@@ -78,35 +77,18 @@ namespace better_sdt
             }
             return mat;
         }
-        private static void SaveJpegFrame(byte[] imageBytes)
-        {
-            try
-            {
-                using (MemoryStream ms = new MemoryStream(imageBytes))
-                {
-                    using (var fs = new FileStream("received_frame.jpg", FileMode.Create, FileAccess.Write))
-                    {
-                        ms.WriteTo(fs);
-                    }
-                }
-                Console.WriteLine("Frame saved as received_frame.jpg");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error saving JPEG frame: {ex.Message}");
-            }
-        }
+
         private static void ProcessFrame(Mat frame)
         {
             // Frame üzerinde işlem yapılabilir
             Mat grayFrame = new Mat();
             try
             {
-                //CvInvoke.CvtColor(frame, grayFrame, ColorConversion.Bgr2Gray);
+                CvInvoke.CvtColor(frame, grayFrame, ColorConversion.Bgr2Gray);
 
                 // QR kod işlemleri yapılabilir
                 // Example: Detect QR codes or other processing
-                qrs.initalize(frame); // QR kodu işleme için
+                // qrs.initalize(frame); // QR kodu işleme için
 
             }
             catch (Exception ex)
