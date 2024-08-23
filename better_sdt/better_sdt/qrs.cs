@@ -63,7 +63,8 @@ namespace better_sdt
 
 
                     Emgu.CV.Mat points = new Emgu.CV.Mat();
-                    ApplyOp(grayFrame, resultFrame);
+                 //   ApplyOp(grayFrame, resultFrame);
+                
                     if (qrDetector.Detect(grayFrame, points))
                     {
 
