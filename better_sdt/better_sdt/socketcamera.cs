@@ -14,17 +14,21 @@ namespace better_sdt
 {
     class socketcamera
     {
+
+        static TcpClient client;
+        static NetworkStream stream;
+        static byte[] dataBuffer;
         internal static void start()
         {
-            TcpClient client = new TcpClient("127.0.0.1", 8000);
+            client = new TcpClient("127.0.0.1", 8000);
             while (!client.Connected)
             {
 
                 try
                 {
                    
-                    NetworkStream stream = client.GetStream();
-                    byte[] dataBuffer = new byte[4];
+                    stream = client.GetStream();
+                    dataBuffer = new byte[4];
 
                 }
                 catch (Exception e) {
