@@ -59,6 +59,11 @@ namespace better_sdt
 
                             // QR kod işlemleri yapılabilir
                             ProcessFrame(frame);
+                            using (var fs = new FileStream("test.jpg", FileMode.Create, FileAccess.Write))
+                            {
+                                fs.Write(data, 0, data.Length);
+                            }
+
                         }
                     }
                     catch (Exception ex)
@@ -72,19 +77,20 @@ namespace better_sdt
         private static Mat ByteArrayToMat(byte[] imageBytes)
         {
             Mat mat = new Mat();
-            try
+            using (VectorOfByte vec = new VectorOfByte(imageBytes))
             {
-                using (VectorOfByte vec = new VectorOfByte(imageBytes))
+                // JPEG verisini decode et
+                CvInvoke.Imdecode(vec, ImreadModes.Color, mat);
+
+                if (mat.IsEmpty)
                 {
-                    CvInvoke.Imdecode(vec, ImreadModes.Color, mat);
+                    Console.WriteLine("JPEG verisi decode edilemedi.");
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Imdecode error: {ex.Message}");
             }
             return mat;
         }
+
+
 
         private static void ProcessFrame(Mat frame)
         {
@@ -97,6 +103,7 @@ namespace better_sdt
                 // QR kod işlemleri yapılabilir
                 // Example: Detect QR codes or other processing
                 qrs.initalize(grayFrame); // QR kodu işleme için
+
             }
             catch (Exception ex)
             {
