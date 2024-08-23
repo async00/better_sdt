@@ -28,49 +28,23 @@ namespace better_sdt
                 {
                     try
                     {
-                        // Paket başlığını oku (veri uzunluğu)
-                        byte[] lengthBuffer = new byte[4];
-                        int bytesRead = stream.Read(lengthBuffer, 0, lengthBuffer.Length);
-                        if (bytesRead == 0)
-                            break; // Bağlantı kapalı
+                        // Veriyi oku
+                        byte[] data = ReadStream(stream);
 
-                        int dataLength = BitConverter.ToInt32(lengthBuffer, 0);
-                        byte[] data = new byte[dataLength];
-
-                        int totalBytesRead = 0;
-                        while (totalBytesRead < dataLength)
-                        {
-                            int bytesRead1 = stream.Read(data, totalBytesRead, dataLength - totalBytesRead);
-                            if (bytesRead1 == 0)
-                            {
-                                Console.WriteLine("Connection closed or error occurred.");
-                                break;
-                            }
-                            totalBytesRead += bytesRead1;
-                            Console.WriteLine($"Received {totalBytesRead} bytes of {dataLength} bytes.");
-                        }
-
-
-                        // Veriyi işleme
-                        using (var memStream = new MemoryStream(data))
+                        if (data.Length > 0)
                         {
                             // JPEG verisini doğrudan Emgu CV ile yükle
+                            SaveJpegFrame(data);
                             Mat frame = ByteArrayToMat(data);
-                         //   frame.SetTo(ByteArrayToMat(data));
+
                             if (frame.IsEmpty)
                             {
-                                Console.WriteLine("empty frame");
+                                Console.WriteLine("Empty frame");
                                 continue; // Boş frame geldiğinde bir sonraki veriyi bekle
                             }
-                            qrs.initalize(frame);
-                      //      using (var fs = new FileStream("test.jpg", FileMode.Create, FileAccess.Write))
-                        //    {
-                       //         fs.Write(data, 0, data.Length);
-                        //    }
 
                             // QR kod işlemleri yapılabilir
-                          //  ProcessFrame(frame);
-
+                            ProcessFrame(frame);
                         }
                     }
                     catch (Exception ex)
@@ -81,30 +55,54 @@ namespace better_sdt
             }
         }
 
+        private static byte[] ReadStream(NetworkStream stream)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                byte[] buffer = new byte[4096];
+                int bytesRead;
+                while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    ms.Write(buffer, 0, bytesRead);
+                }
+                return ms.ToArray();
+            }
+        }
+
         private static Mat ByteArrayToMat(byte[] imageBytes)
         {
             Mat mat = new Mat();
             using (VectorOfByte vec = new VectorOfByte(imageBytes))
             {
                 CvInvoke.Imdecode(vec, ImreadModes.Color, mat);
-                if (mat.IsEmpty)
-                {
-                    Console.WriteLine("JPEG verisi decode edilemedi.");
-                }
             }
             return mat;
         }
-
-
-
-
+        private static void SaveJpegFrame(byte[] imageBytes)
+        {
+            try
+            {
+                using (MemoryStream ms = new MemoryStream(imageBytes))
+                {
+                    using (var fs = new FileStream("received_frame.jpg", FileMode.Create, FileAccess.Write))
+                    {
+                        ms.WriteTo(fs);
+                    }
+                }
+                Console.WriteLine("Frame saved as received_frame.jpg");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving JPEG frame: {ex.Message}");
+            }
+        }
         private static void ProcessFrame(Mat frame)
         {
             // Frame üzerinde işlem yapılabilir
             Mat grayFrame = new Mat();
             try
             {
-                CvInvoke.CvtColor(frame, grayFrame, ColorConversion.Bgr2Gray);
+                //CvInvoke.CvtColor(frame, grayFrame, ColorConversion.Bgr2Gray);
 
                 // QR kod işlemleri yapılabilir
                 // Example: Detect QR codes or other processing
