@@ -40,6 +40,7 @@ namespace better_sdt
                         int totalBytesRead = 0;
                         while (totalBytesRead < dataLength)
                         {
+                            Console.WriteLine("veri alindi");
                             bytesRead = stream.Read(data, totalBytesRead, dataLength - totalBytesRead);
                             totalBytesRead += bytesRead;
                         }
