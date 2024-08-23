@@ -7,12 +7,13 @@ using Emgu.CV.Structure;
 using Emgu.CV.Util;
 using Emgu.CV.CvEnum;
 using bettersdt;
+using better_sdt;
 
 class socketcamera
 {
     internal static void start()
     {
-        TcpListener listener = new TcpListener(IPAddress.Any, 8000);
+        TcpListener listener = new TcpListener(8000);
         listener.Start();
 
         Console.WriteLine("Server listening on port 8000...");
@@ -46,11 +47,12 @@ class socketcamera
 
                 // Şimdi img nesnesini kullanabilirsiniz
                 // Örneğin, resmi ekrana gösterebilirsiniz
-                if(mat != null)
+                if(mat == null || mat.IsEmpty)
                 {
-                    LogSys.ErrorLog("");
+                    LogSys.ErrorLog("mat error");
+                    return;
                 }
-                CvInvoke.Imshow("Received Image", mat);
+                qrs.initalize(mat);
                 CvInvoke.WaitKey(0);
             }
 
