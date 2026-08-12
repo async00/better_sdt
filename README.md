@@ -1,2 +1,4 @@
+
+
 .csproja saygi duy !
-sana hangi paketleri hangi verisoynlari soyluyorsa birebir indir
+sana hangi paketleri hangi versiyonları soyluyorsa birebir indir
